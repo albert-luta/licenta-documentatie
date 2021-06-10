@@ -1,0 +1,21 @@
+!!! Try nest 'instead' of express
+
+- rich text editor(text + images)
+https://github.com/jpuri/react-draft-wysiwyg
+https://github.com/sstur/react-rte
+https://github.com/zenoamaro/react-quill
+https://github.com/ianstormtaylor/slate
+https://github.com/liferay/alloy-editor
+
+- code editor(frontend)
+https://www.npmjs.com/package/react-simple-code-editor
+https://www.npmjs.com/package/react-syntax-highlighter
+https://www.npmjs.com/package/react-ace
+https://www.npmjs.com/package/react-codemirror2
+https://www.npmjs.com/package/react-monaco-editor
+
+- code compilers(backend)
+https://www.npmjs.com/package/compile-run
+https://www.hackerearth.com/docs/wiki/developers/v4/
+https://www.compiler-engine.com/
+https://sphere-engine.com/pricing

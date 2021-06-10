@@ -1,0 +1,19 @@
+- docebo:
+	- website: https://test-123456.docebosaas.com
+	- email: gqxnrjpteokzwgkjos@kiabws.onlineu
+	- pass: parolatest
+- talent lms
+- sap litmos
+- learn upon
+
+GraphQL:
+- https://graphql.org/learn/queries/
+- https://www.howtographql.com/
+- https://www.edx.org/course/exploring-graphql-a-query-language-for-apis
+- https://graphql.org/learn/schema/
+
+Auth JWT GraphQL:
+- https://hasura.io/blog/best-practices-of-using-jwt-with-graphql/
+
+TypeGraphQL:
+- https://www.youtube.com/playlist?list=PLN3n1USn4xlma1bBu3Tloe4NyYn9Ko8Gs

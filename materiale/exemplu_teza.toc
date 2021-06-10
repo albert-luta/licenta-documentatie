@@ -1,0 +1,12 @@
+\select@language {romanian}
+\contentsline {chapter}{Lista figurilor}{iii}{chapter*.2}
+\contentsline {chapter}{Lista tabelelor}{iv}{chapter*.3}
+\contentsline {unnumberedsection}{Lista acronimelor}{v}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Introducere}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Alte recomand\IeC {\u a}ri}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Basme}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}Pungu\IeC {{\textcommabelow t}}a cu doi bani}{2}{section.2.1}
+\contentsline {section}{\numberline {2.2}Tinere\IeC {{\textcommabelow t}}e f\IeC {\u a}r\IeC {\u a} b\IeC {\u a}tr\IeC {\^a}ne\IeC {{\textcommabelow t}}e \IeC {{\textcommabelow s}}i via\IeC {{\textcommabelow t}}\IeC {\u a} f\IeC {\u a}r\IeC {\u a} de moarte}{2}{section.2.2}
+\contentsline {section}{\numberline {2.3}Cinci P\IeC {\^a}ini}{4}{section.2.3}
+\contentsline {chapter}{\appnumberline {A}Rezolvare ''Cinci P\IeC {\^a}ini''}{7}{appendix.A}
+\contentsline {chapter}{\appnumberline {B}Alte pove\IeC {{\textcommabelow s}}ti \IeC {{\textcommabelow s}}i basme}{8}{appendix.B}

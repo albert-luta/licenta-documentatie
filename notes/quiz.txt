@@ -1,0 +1,41 @@
+general:
+- Timing:
+  - start
+  - end
+  - time limit
+  - number of attempts - default: 1, 2, .../infinite
+- Questions behaviour:
+  - shuffle questions(inside pages)
+  - nu poti sa te intorci la o intrebare/grup de intrebari rezolvata/e
+  Alege cate intrebari din fiecare grup + ordinea de afisare:
+  - lista cu nr intrebari/grup
+- Layout:
+  How many questions to show/page:
+  - single/group(blocat daca a ales shuffle q)/all
+- Review options
+  when to show the mark
+  - immediate after completion
+  - after the end time
+  when to show the feedback on picked answers && when to show the correct answers
+  - immediate after completion
+  - after the end time
+  - don't show
+- nota maxima
+
+
+adding questions:
+- cerinta intrebarii
+- add/choose group
+- raspunsuri - 2 grupuri - gresite
+	     		 - corecte
+	     - motivare raspuns
+	     - show to students
+	     - cate raspunsuri sa arate
+	     Tipuri:
+	     - simplu
+	     - multiplu - alegi min/max corecte
+			- punctare partiala
+	     - numeric
+	     - essay
+
+

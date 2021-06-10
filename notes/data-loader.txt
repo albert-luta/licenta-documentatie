@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=uCbFMZYQbxE&t=10s
+https://github.com/nestjs/docs.nestjs.com/issues/1135
+https://github.com/bkegley/luminate/blob/master/packages/backend/services/encyclopedia/schema/src/infra/loaders/CoffeeLoader.ts
+https://github.com/bkegley/luminate/blob/a94a8f26a4bfbc32bd851c3e66b33b5762ebfd58/packages/backend/services/encyclopedia/schema/src/application/schema/Coffee.ts#L86-L109

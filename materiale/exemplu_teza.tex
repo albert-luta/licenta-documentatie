@@ -1,0 +1,424 @@
+
+\documentclass[12pt, a4paper, oneside, romanian]{teza-upb}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{babel}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage[
+  bookmarks,
+  bookmarksopen=true,
+  pdftitle={Dizertatie},
+  linktocpage]{hyperref}
+
+
+\singlespacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%cod colorat
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	language=Matlab,
+ %   backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\scriptsize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\author{Ion Creangă}
+
+\title{Basmele românilor}
+
+
+\facultatea{Facultatea de Electronică, Telecomunicații și Tehnologia Informației}
+\tiplucrare{licență}
+%\tiplucrare{dizertație}
+\domeniu{Electronică, Telecomunicații și Tehnologia Informației}
+\catedra{Telecomunicații}
+\campus{Leu} 
+\program{Povești}
+\titlulobtinut{Inginer}
+%\titlulobtinut{Master}
+\director{Mihail Kogălniceanu} 
+
+\submissionmonth{Iunie} 
+\submissionyear{2011} 
+
+\beforepreface
+\listoffigures
+\listoftables
+\abbreviations{ 
+  HA = Harap Alb\\
+  PLL =  Păsări-Lăți-Lungilă\\
+  Sp  = Spânul 
+  
+}
+%\preface{}
+\afterpreface 
+
+\chapter{Introducere}
+
+
+   Pentru facilitarea formatării tezei de licență/dizertație în
+   \LaTeX{}, se furnizează fișierul clasă ``upb\_thesis.cls'' și un model de
+   folosire ``exemplu\_teza.tex''.  Utilizarea comenzilor standard
+   \verb=\documentclass=, \verb=usepackage=, \verb=setcounter=,
+   etc. nu este diferită de utilizarea lor în orice alt context
+   \LaTeX{}. Comenzile standard sau cele specifice {UPB}
+   apar într-o secvență care trebuie respectată pentru a obține documentul în formatul
+   acceptat de universitate.  Pentru redactarea tezei, este
+   obligatorie folosirea următoarelor comenzi:
+
+\verb=\singlespacing= specifică spațierea pentru întregul document.
+
+\verb=\author{Ion Creangă}= numele studentului va fi inserat pe pagina de titlu și în declarația de onestitate.  
+
+\verb=\title{Basmele românilor}= titlul tezei 
+
+\verb=\facultatea{Facultatea de Electronică, Telecomunicații și Tehnologia= \\
+\verb=Informației}=
+
+\verb=\tiplucrare{licență}= parametrul trebuie să fie ``licență'' sau ``dizertație''
+
+\verb=\domeniu{Electronică, Telecomunicații și Tehnologia Informației}=
+
+\verb=\catedra{}=Conform anexei 4 din ghidula absolventului. 
+
+\verb=\program{Povești}= numele specializării
+
+\verb=\titlulobtinut{Inginer}= parametrul trebuie să fie ``Inginer'' sau ``Master''
+
+\verb=\director{Mihail Kogălniceanu}= numele îndrumătorului de
+proiect. Dacă sunt mai mulți, se vor separate cu doi backslash și un spațiu: 
+
+\verb=\director{Mihail Kogălniceanu\\ Titu Maiorescu}=
+
+\verb=\submissionmonth{Iunie}=
+
+\verb=\submissionyear{2011}= data care apare pe pagina de titlu
+
+Listele opționale de figuri, tabele, și abrevieri trebuie incluse în secvența \\
+\verb=\beforepreface= - \verb=\afterpreface=: 
+\begin{verbatim}
+\beforepreface
+\listoffigures
+\listoftables
+\abbreviations{
+}
+\afterpreface
+\end{verbatim}
+\section{Alte recomandări}
+\begin{itemize}
+\item Se recomandă folosirea pachetului aspell (pachetul \verb=aspell-ro= în
+Debian/Ubuntu) pentru verificarea ortografiei, cu comanda:
+{\small \begin{verbatim}aspell --lang=ro -t check  ./exemplu_teza.tex\end{verbatim}}
+
+\item Se recomandă verificarea fonturilor în PDF-ul produs - este preferabil
+să nu se folosească decât ``Type 1'' sau ``Truetype'', nu ``Type 3''. 
+\end{itemize}
+
+\chapter{Basme}
+\section{Punguța cu doi bani}
+
+
+Era odată o babă și un moșneag. Baba avea o găină, și
+moșneagul un cucoș; găina babei se oua de câte două ori pe fiecare zi
+și baba mânca o mulțime de ouă; iar moșneagului nu-i da nici
+unul. Moșneagul într-o zi perdu răbdarea și zise:
+
+— Măi babă, mănânci ca în târgul lui Cremene. Ia dă-mi și mie niște
+ouă, ca să-mi prind pofta măcar. — Da' cum nu! zise baba, care era
+foarte zgârcită. Dacă ai poftă de ouă, bate și tu cucoșul tău, să facă
+ouă, și-i mânca; că eu așa am bătut găina, și iacătă-o cum se ouă.
+
+Moșneagul, pofticios și hapsin, se ia după gura babei și, de ciudă,
+prinde iute și degrabă cucoșul și-i dă o bataie bună, zicând:
+
+— Na! ori te ouă, ori du-te de la casa mea; ca să nu mai strici
+mâncarea degeaba.
+
+Cucoșul, cum scăpă din mânile moșneagului, fugi de-acasă și umbla pe
+drumuri, bezmetec. Și cum mergea el pe-un drum, numai iată găsește o
+punguță cu doi bani (Figura \ref{fig:punguta}). Și cum o găsește, o și ia în clonț și se întoarnă
+cu dânsa înapoi către casa moșneagului. Pe drum se întâlnește c-o
+trăsură c-un boier și cu niște cucoane. Boierul se uită cu băgare de
+seamă la cucoș, vede în clonțu-i o punguță și zice vezeteului:
+
+— Măi! ia dă-te jos și vezi ce are cucoșul cela în plisc.
+
+\begin{figure}[tb]
+\centering
+\includegraphics*[width=0.4\columnwidth]{figuri/punguta.jpg}
+\caption{Cucoșu găsește o pungă cu doi galbeni.}
+\label{fig:punguta}
+\end{figure}
+
+
+
+Vezeteul se dă iute jos din capra trăsurei, și c-un feliu de meșteșug,
+prinde cucoșul și luându-i punguța din clonț o dă boieriului. Boieriul
+o ia, fără păsare o pune în buzunar și pornește cu trăsura
+înainte. Cucoșul, supărat de asta, nu se lasă, ci se ia după trăsură,
+spuind neîncetat:
+
+Cucurigu ! boieri mari, Dați punguța cu doi bani !
+
+
+[...]
+
+(Publicată pentru prima oară în \cite{punguta1876}.)
+
+\section{Tinerețe fără bătrânețe și viață fără de moarte}
+
+A fost odată ca niciodată; că de n-ar fi, nu s-ar mai povesti; de când
+făcea plopșorul pere și răchita micșunele; de când se băteau urșii în
+coade; de când se luau de gât lupii cu mieii de se sărutau,
+înfrățindu-se; de când se potcovea puricele la un picior cu nouăzeci
+și nouă de oca de fier și s-arunca în slava cerului de ne aducea
+povești;
+
+
+    De când se scria musca pe părete,
+    Mai mincinos cine nu crede.
+
+
+A fost odată un împărat mare și o împărăteasă, amândoi tineri și
+frumoși, și, voind să aibă copii, a făcut de mai multe ori tot ce
+trebuia să facă pentru aceasta; a îmblat pe la vraci\cite{TanenbaumCN02} și filosofi, ca
+să caute la stele și să le ghicească daca or să facă copii; dar în
+zadar. În sfârșit, auzind împăratul că este la un sat, aproape, un
+unchiaș dibaci, a trimis să-l cheme; dar el răspunse trimișilor că:
+cine are trebuință, să vie la dânsul. S-au sculat deci împăratul și
+împărăteasa și, luând cu dânșii vro câțiva boieri mari, ostași și
+slujitori, s-au dus la unchiaș acasă. Unchiașul, cum i-a văzut de
+departe, a ieșit să-i întâmpine și totodată le-a zis:
+
+- Bine ați venit sănătoși; dar ce îmbli, împărate, să afli? Dorința ce
+ai o să-ți aducă întristare.
+
+- Eu nu am venit să te întreb asta, zise împăratul, ci, daca ai ceva
+leacuri care să ne facă să avem copii, să-mi dai.
+
+- Am, răspunse unchiașul; dar numai un copil o să faceți. El o să fie
+Făt-Frumos și drăgăstos, și parte n-o să aveți de el. Luând împăratul
+și împărăteasa leacurile, s-au întors veseli la palat și peste câteva
+zile împărăteasa s-a simțit însărcinată. Toată împărăția și toată
+curtea și toți slujitorii s-au veselit de această întâmplare.
+
+Mai-nainte de a veni ceasul nașterii, copilul se puse pe un plâns, de
+n-a putut nici un vraci să-l împace. Atunci împăratul a început să-i
+făgăduiască toate bunurile din lume, dar nici așa n-a fost cu putință
+să-l facă să tacă.
+
+- Taci, dragul tatei, zice împăratul, că ți-oi da împărăția cutare sau
+cutare; taci, fiule, că ți-oi da soție pe cutare sau cutare fată de
+împărat, și alte multe d-alde astea; în sfârșit, dacă văzu și văzu că
+nu tace, îi mai zise: taci, fătul meu, că ți-oi da Tinerețe fără
+bătrânețe și viață fără de moarte.
+
+Atunci, copilul tăcu și se născu; iar slujitorii deteră în timpine și
+în surle și în toată împărăția se ținu veselie mare o săptămână
+întreagă.
+
+De ce creștea copilul, d-aceea se făcea mai isteț și mai îndrăzneț. Îl
+deteră pe la școli și filosofi, și toate învățăturile pe care alți
+copii le învăța într-un an, el le învăța într-o lună, astfel încât
+împăratul murea și învia de bucurie. Toată împărăția se fălea că o să
+aibă un împărat înțelept și procopsit ca Solomon împărat. De la o
+vreme încoace însă, nu știu ce avea, că era tot galeș, trist și dus pe
+gânduri. Iar când fuse într-o zi, tocmai când copilul împlinea
+cincisprezece ani și împăratul se afla la masă cu toți boierii și
+slujbașii împărăției și se chefuiau, se sculă Făt-Frumos și zise:
+
+- Tată, a venit vremea să-mi dai ceea ce mi-ai făgăduit la naștere.
+
+Auzind aceasta, împăratul s-a întristat foarte și i-a zis:
+
+– Dar bine, fiule, de unde pot eu să-ți dau un astfel de lucru nemaiauzit? Și dacă ți-am făgăduit atunci, a fost numai ca să te împac.
+
+– Daca tu, tată, nu poți să-mi dai, apoi sunt nevoit să cutreier toată lumea până ce voi găsi făgăduința pentru care m-am născut.
+
+Atunci toți boierii și împăratul deteră în genuchi, cu rugăciune să nu părăsească împărăția; fiindcă, ziceau boierii:
+
+– Tatăl tău de aci înainte e bătrân, și o să te ridicăm pe tine în scaun, și avem să-ți aducem cea mai frumoasă împărăteasă de sub soare de soție.
+
+Dar n-a fost putință să-l întoarcă din hotărârea sa, rămânând statornic ca o piatră în vorbele lui; iar tată-său, dacă văzu și văzu, îi dete voie și puse la cale să-i gătească de drum merinde și tot ce-i trebuia.
+
+
+[...]
+
+\section[Cinci Pâini]{Cinci pâini \footnote{Anecdotă publicată prima oară în Convorbiri literare, nr. 12, 1 martie 1883}}
+
+
+Doi oameni, cunoscuți unul cu altul, călătoreau odată, vara, pe un drum. Unul avea în traista sa trei pâni, și celalalt două pâni. De la o vreme, fiindu-le foame, poposesc la umbra unei răchiți pletoase, lângă o fântână cu ciutură, scoate fiecare pânile ce avea și se pun să mănânce împreună, ca să aibă mai mare poftă de mâncare.
+
+
+Tocmai când scoaseră pânile din traiste, iaca un al treile drumeț, necunoscut, îi ajunge din urmă și se oprește lângă dânșii, dându-le ziua bună. Apoi se roagă să-i deie și lui ceva de mâncare, căci e tare flămând și n-are nimica merinde la dânsul, nici de unde cumpăra.
+
+— Poftim, om bun, de-i ospăta împreună cu noi, ziseră cei doi drumeți călătorului străin; căci mila Domnului! unde mănâncă doi mai poate mânca și al treilea.
+
+Călătorul străin, flămând cum era, nemaiașteptând multă poftire, se așază jos lângă cei doi, și încep a mânca cu toții pâne goală și a be apă rece din fântână, căci altă udătură nu aveau. Și mănâncă ei la un loc tustrei, și mănâncă, până ce gătesc de mâncat toate cele cinci pâni, de parcă n-au mai fost.
+
+După ce-au mântuit de mâncat, călătorul străin scoate cinci lei din pungă și-i dă, din întâmplare, celui ce avusese trei pâni, zicând:
+
+— Primiți, vă rog, oameni buni, această mică mulțămită de la mine, pentru că mi-ați dat demâncare la nevoie; veți cinsti mai încolo câte un pahar de vin, sau veți face cu banii ce veți pofti. Nu sunt vrednic să vă mulțămesc de binele ce mi-ați făcut, căci nu vedeam lumea înaintea ochilor de flămând ce eram.
+
+Cei doi nu prea voiau să primească, dar, după multă stăruință din partea celui al treilea, au primit. De la o vreme, călătorul străin și-a luat ziua bună de la cei doi și apoi și-a căutat de drum. Ceilalți mai rămân oleacă sub răchită, la umbră, să odihnească bucatele. Și, din vorbă în vorbă, cel ce avuse trei pâni dă doi lei celui cu două pâni, zicând:
+
+— Ține, frate, partea dumitale, și fă ce vrei cu dânsa. Ai avut două pâni întregi, doi lei ți se cuvin. Și mie îmi opresc trei lei, fiindc-am avut trei pâni întregi, și tot ca ale tale de mari, după cum știi.
+
+— Cum așa?! zise celălalt cu dispreț! pentru ce numai doi lei, și nu doi și jumătate, partea dreaptă ce ni se cuvine fiecăruia? Omul putea să nu ne deie nimic, și atunci cum rămânea?
+
+— Cum să rămâie? zise cel cu trei pâni; atunci aș fi avut eu pomană pentru partea ce mi se cuvine de la trei pâni, iar tu, de la două, și pace bună. Acum, însă, noi am mâncat degeaba, și banii pentru pâne îi avem în pungă cu prisos: eu trei lei și tu doi lei, fiecare după numărul pânilor ce am avut. Mai dreaptă împărțeală decât aceasta nu cred că se mai poate nici la Dumnezeu sfântul...
+
+— Ba nu, prietene, zice cel cu două pâni. Eu nu mă țin că mi-ai făcut parte dreaptă. Haide să ne judecăm, și cum a zice judecata, așa să rămâie.
+
+— Haide și la judecată, zise celălalt, dacă nu te mulțămești. Cred că și judecata are să-mi găsească dreptate, deși nu m-am târât prin judecăți de când sunt.
+
+Și așa, pornesc ei la drum, cu hotărârea să se judece. Și cum ajung într-un loc unde era judecătorie, se înfățoșează înaintea judecătorului și încep a spune împrejurarea din capăt, pe rând fiecare; cum a venit întâmplarea de au călătorit împreună, de au stat la masă împreună, câte pâni a avut fiecare, cum a mâncat drumețul cel străin la masa lor, deopotrivă cu dânșii, cum le-a dat cinci lei drept mulțămită și cum cel cu trei pâni a găsit cu cale să-i împartă.
+
+Judecătorul, după ce-i ascultă pe amândoi cu luare aminte, zise celui cu două pâni: — Și nu ești mulțămit cu împărțeala ce s-a făcut, omule?
+
+— Nu, domnule judecător, zise nemulțămitul; noi n-am avut de gând să luăm plată de la drumețul străin pentru mâncarea ce i-am dat; dar, dac-a venit întâmplarea de-așa, apoi trebuie să împărțim drept în două ceea ce ne-a dăruit oaspetele nostru. Așa cred eu că ar fi cu cale, când e vorba de dreptate.
+
+— Dacă e vorba de dreptate, zise judecătorul, apoi fă bine de înapoiește un leu istuialalt, care spui c-a avut trei pâni.
+
+— De asta chiar mă cuprinde mirare, domnule judecător, zise nemulțămitul cu îndrăzneală. Eu am venit înaintea judecăței să capăt dreptate, și văd că dumneata, care știi legile, mai rău mă acufunzi. De-a fi să fie tot așa și judecata dinaintea lui Dumnezeu, apoi vai de lume!
+
+— Așa ți se pare dumitale, zise judecătorul liniștit, dar ia să vezi că nu-i așa. Ai avut dumneata două pâni?
+
+— Da, domnule judecător, două am avut.
+
+— Tovarășul dumitale, avut-a trei pâni?
+
+— Da, domnule judecător, trei a avut.
+
+— Udătură ceva avut-ați vreunul?
+
+— Nimic, domnule judecător, numai pâne goală și apă răce din fântână, fie de sufletul cui a făcut-o acolo, în calea trecătorilor.
+
+— Dinioarea, parcă singur mi-ai spus, zise judecătorul, că ați mâncat toți tot ca unul de mult; așa este?
+
+— Așa este domnule judecător.
+
+— Acum, ia să statornicim rânduiala următoare, ca să se poată ști hotărât care câtă pâne a mâncat. Să zicem că s-a tăiat fiecare pâne în câte trei bucăți deopotrivă de mari; câte bucăți ai fi avut dumneata, care spui că avuși două pâni?
+
+— Șese bucăți aș fi avut, domnule judecător.
+
+— Dar tovarășul dumitale, care spui că avu trei pâni?
+
+— Nouă bucăți ar fi avut, domnule judecător.
+
+— Acum, câte fac la un loc șese bucăți și cu nouă bucăți?
+
+— Cincisprezece bucăți, domnule judecător.
+
+— Câți oameni ați mâncat aceste cincisprezece bucăți de pâne?
+
+— Trei oameni, domnule judecător.
+
+— Bun! Câte câte bucăți vin de fiecare om?
+
+— Câte cinci bucăți, domnule judecător.
+
+— Acum, ții minte câte bucăți ai fi avut dumneta?
+
+— Șese bucăți, domnule judecător.
+
+— Dar de mâncat, câte ai mâncat dumneta?
+
+— Cinci bucăți, domnule judecător.
+
+— Și câte ți-au mai rămas de întrecut?
+
+— Numai o bucată, domnule judecător.
+
+— Acum să stăm aici, în ceea ce te privește pe dumneta, și să luăm pe istalalt la rând. Ții minte câte bucăți de pâne ar fi avut tovarășul d-tale?
+
+— Nouă bucăți, domnule judecător.
+
+— Și câte a mâncat el de toate?
+
+— Cinci bucăți, ca și mine, domnule judecător.
+
+— Dar de întrecut, câte i-au mai rămas?
+
+— Patru bucăți, domnule judecător.
+
+— Bun! Ia, acuș avem să ne înțelegem cât se poate de bine! Vra să zică, dumneta ai avut numai o bucată de întrecut, iar tovarășul dumitale, patru bucăți. Acum, o bucată de pâne rămasă de la dumneta și cu patru bucăți de la istalalt fac la un loc cinci bucăți?
+
+— Taman cinci, domnule judecător.
+
+— Este adevărat că aceste bucăți de pâne le-a mâncat oaspetele dumneavoastră, care spui că v-a dat cinci lei drept mulțămită?
+
+— Adevărat este, domnule judecător.
+
+— Așadar, dumitale ți se cuvine numai un leu, fiindcă numai o bucată de pâne ai avut de întrecut, și aceasta ca și cum ai fi avut-o de vânzare, deoarece ați 
+primit bani de la oaspetele dumneavoastră. Iar tovarășul dumitale i se cuvin patru lei, fiindcă patru bucăți de pâne a avut de întrecut. Acum, dară, fă bine de înapoiește un leu tovarășului dumitale. Și dacă te crezi nedreptățit, du-te și la Dumnezeu, și las' dacă ți-a face și el judecată mai dreaptă decât aceasta!
+
+Cel cu două pâni, văzând că nu mai are încotro șovăi, înapoiește un leu tovarășului său, cam cu părere de rău, și pleacă rușinat. Cel cu trei pâni însă, uimit de așa judecată, mulțămește judecătorului și apoi iese, zicând cu mirare:
+
+— Dac-ar fi pretutindene tot asemenea judecători, ce nu iubesc a li cânta cucul din față, cei ce n-au dreptate n-ar mai năzui în veci și-n pururea la judecată.
+
+Corciogarii, porecliți și apărători, nemaiavând chip de traiu numai din minciuni, sau s-ar apuca de muncă, sau ar trebui, în toată viața lor, să tragă pe dracul de coadă... Iar societatea bună ar rămâne nebântuită.
+
+
+
+\bibliographystyle{unsrt}
+\bibliography{referinte}
+
+
+\appendix
+\chapter {Rezolvare ''Cinci Pâini''}
+A aduce 3 pâini, iar B aduce 2 pâini. C plătește 5 lei.  Se împarte
+fiecare pâine în 3 părți egale: $3 \times 3 + 2 \times 3 = 15$
+bucăți. Fiecare mesean capătă câte 5 bucăți. Reiese că A i-a dat lui C
+$3 \times 3 - 5 = 4$ pâini, iar B i-a dat $2 \times 3 - 5 = 1$
+pâine. Împărțeală cinstită este deci 4 lei pentru A, și 1 leu pentru B.
+
+\chapter{Alte povești și basme}
+
+ Vezi tabela \ref{altebasme} cu alte povești și autorii/culegătorii lor.
+\lstinputlisting[language=Matlab]{Cod/Cod.m}
+
+
+\begin{table}
+\begin{tabular}[t]{c|p{3cm}|p{3cm}|p{3cm}|c}
+\_ & Dănilă prepeleac & Prâslea cel voinic și merele de aur & Făt-Frumos din lacrimă & Greuceanu \\
+\hline
+ & Ion Creangă & Petre Ispirescu & Mihai Eminescu & Petre Ispirescu \\
+\end{tabular}
+\label{altebasme}
+\caption{Alte basme.}
+\end{table}
+
+
+
+
+
+\end{document}
