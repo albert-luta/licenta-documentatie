@@ -6,6 +6,7 @@
 \usepackage{babel}
 \usepackage{color}
 \usepackage{graphicx}
+\usepackage{indentfirst}
 \usepackage[
   bookmarks,
   bookmarksopen=true,
@@ -62,17 +63,17 @@
 
 \begin{document}
 
-\author{LUTA Albert-Lucian}
+\author{Albert-Lucian LUTA}
 
 \title{Includerea instrumentelor de predare-testare într-o aplicație e-learning}
 
 
 \facultatea{Facultatea de Electronică, Telecomunicații și Tehnologia Informației}
-\tiplucrare{licență}
-\domeniu{Electronică, Telecomunicații și Tehnologia Informației}
+\tiplucrare{diploma}
+\domeniu{Calculatoare și Tehnologia Informației}
 \catedra{Telecomunicații}
 \campus{Leu} 
-\program{INF}
+\program{Ingineria Informației}
 \titlulobtinut{Inginer}
 \director{Ş.L.Dr.Ing. Elena Cristina STOICA} 
 
@@ -85,33 +86,41 @@
 \abbreviations{ 
 	CSR = Client Side Rendering\\
 	SSR = Server Side Rendering\\
-	SSG = Static Site Generation \\
-	ISR = Incremental Static Regeneration
+	SSG = Static Site Generation\\
+	ISR = Incremental Static Regeneration\\
+	API = Aplication Programming Interface
 }
 \afterpreface 
 
-\chapter{Chapter}
+\chapter*{Introducere}
+\addcontentsline{toc}{chapter}{Introducere}
 
-Text Chapter.
+\section{Scopul Proiectului}
 
-\section{Section}
+Contextul actual a accelerat, fie că ne-am dorit sau nu, procesul de învăţare online. Chiar dacă mulţi dintre elevi şi profesori nu au fost pregătiţi pentru asta, unii nici nu şi-au dorit, acum predarea prin intermediul internetului a devenit o necesitate.\cite{liferoplatform}
 
-Text section.
+Proiectul are rolul de a crea o platforma prin care universitatile sa isi poata desfasura activitatea de predare si testare intr-un mod usor, rapid si eficient.
 
-Lista
-\begin{itemize}
-	\item item-1
-	\item item-2
-\end{itemize}
+\section{Descrierea proiectului}
 
-Citat
-(Publicată pentru prima oară în \cite{punguta1876}.)
+Se va dezvolta o aplicatie web, cu ajutorul careia universitatile isi vor putea adauga si imparti utilizatorii in 3 roluri: Administrator, Profesor si Student. In functie de acest rol, vor exista functionalitati diferite prin care un utilizator poate interactiona cu platforma.
 
-\begin{lstlisting}
-const hey = () => console.log('merge');
-hey();
-\end{lstlisting}
+Studentii vor avea acces in orice moment la materialele atasate de catre profesori, pentru studiul independent in afara orelor de curs si pentru o aprofundare mai buna a materiei. Acestia vor putea accesa sarcinile la care sunt atribuiti de catre profesor si vor putea incarca pana la o data limita materialele la care au lucrat, ulterior fiind notati. Testele se vor tine in aproximativ aceeasi maniera, va exista o data de incepere si una de inchidere a testului, timp in care studentii vor trebui sa raspunda la toate intrebarile pentru a obtine punctajul maxim.
 
+Profesorii vor putea atasa materiale, crea si configura sarcini de lucru si teste pentru studenti. Acestia vor avea posibilitatea de a imparti intr-un mod logic materialele in functie de sectiunile pe care le creeaza la fiecare materie.
+
+Administratorii vor avea avea acces la toate functionalitatile de mai sus, iar pe langa acestea, vor putea adauga utilizatori, configura rolul si materiile de care apartin, crea, edita sau sterge facultati si materii.
+
+Fiind o aplicatie web, am ales sa folosesc integral limbajul de programare Typescript, atat pentru frontend, cat si pentru backend. Folosing un singur limbaj pentru intreg proiectul, dezvoltarea acestuia devine mai facila.
+
+\chapter{Tehnologii folosite}
+
+\chapter{Biblioteci si API-uri}
+
+\chapter{Securitate}
+
+\chapter*{Concluzii}
+\addcontentsline{toc}{chapter}{Concluzii}
 
 \bibliographystyle{unsrt}
 \bibliography{referinte}

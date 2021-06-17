@@ -404,7 +404,7 @@
          }
 
         \vskip 20mm
-        {\centering\bfseries{\Huge Lucrare de {\@tiplucrare}}
+        {\centering\bfseries{\Huge Proiect de {\@tiplucrare}}
           \nobreak
           \vskip 4ex plus 2ex minus 2ex 
           \ifdraft%
@@ -446,7 +446,7 @@ Catedra \@catedra} \par\nobreak % DN
          }
 
         \vskip 20mm
-        {\centering\bfseries{\Huge Lucrare de {\@tiplucrare}}
+        {\centering\bfseries{\Huge Proiect de {\@tiplucrare}}
           \nobreak
           \vskip 4ex plus 2ex minus 2ex 
           \ifdraft%
