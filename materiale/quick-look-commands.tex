@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\begin{document}
+
+% Capitol 
+\chapter{#name}
+
+% Subcapitol
+\section{#name}
+
+% Referinta
+\ref{#label}
+
+% Imagine
+\begin{figure}[tb]
+\centering
+\includegraphics*[width=0.4\columnwidth]{#path}
+\caption{#caption}
+\label{#label}
+\end{figure}
+
+% Citat
+\cite{#ref-bib-name}
+
+% Nota de subsol
+\footnote{#note}
+
+% Cod fisier separat
+\lstinputlisting[caption=#caption, language=#language-name]{#path}
+
+% Cod inline
+\begin{lstlisting}[caption=#caption, language=#language-name]
+#code
+\end{lstlisting}
+
+% Lista
+\begin{itemize}
+	\item #item-1
+	\item #item-2
+\end{itemize}
+
+\end{document}

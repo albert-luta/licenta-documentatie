@@ -299,7 +299,7 @@
                          \if\@tempa b\advance\@tempcnta 4\relax\fi
                          \if\@tempa p\advance\@tempcnta 8\relax\fi
          }\global\count\@currbox\@tempcnta}\@fltovf\fi
-    \global\setbox\@currbox\vbox\bgroup 
+   \global\setbox\@currbox\color@vbox\normalcolor\vbox\bgroup %%%%%aici modificare pentru cod colorat
     \def\baselinestretch{1}\@normalsize
     \boxmaxdepth\z@
     \hsize\columnwidth \@parboxrestore}

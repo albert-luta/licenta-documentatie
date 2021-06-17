@@ -1,0 +1,122 @@
+\documentclass[12pt, a4paper, oneside, romanian]{teza-upb}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{babel}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage[
+  bookmarks,
+  bookmarksopen=true,
+  pdftitle={licenta},
+  linktocpage]{hyperref}
+
+
+\singlespacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%cod colorat
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinelanguage{Javascript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{language=Javascript}
+
+\lstdefinestyle{mystyle}{
+	language=Javascript,
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+  	ndkeywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+  	identifierstyle=\color{black},
+    stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\scriptsize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\author{LUTA Albert-Lucian}
+
+\title{Includerea instrumentelor de predare-testare într-o aplicație e-learning}
+
+
+\facultatea{Facultatea de Electronică, Telecomunicații și Tehnologia Informației}
+\tiplucrare{licență}
+\domeniu{Electronică, Telecomunicații și Tehnologia Informației}
+\catedra{Telecomunicații}
+\campus{Leu} 
+\program{INF}
+\titlulobtinut{Inginer}
+\director{Ş.L.Dr.Ing. Elena Cristina STOICA} 
+
+\submissionmonth{Iunie} 
+\submissionyear{2021} 
+
+\beforepreface
+\listoffigures
+\listoftables
+\abbreviations{ 
+	CSR = Client Side Rendering\\
+	SSR = Server Side Rendering\\
+	SSG = Static Site Generation \\
+	ISR = Incremental Static Regeneration
+}
+\afterpreface 
+
+\chapter{Chapter}
+
+Text Chapter.
+
+\section{Section}
+
+Text section.
+
+Lista
+\begin{itemize}
+	\item item-1
+	\item item-2
+\end{itemize}
+
+Citat
+(Publicată pentru prima oară în \cite{punguta1876}.)
+
+\begin{lstlisting}
+const hey = () => console.log('merge');
+hey();
+\end{lstlisting}
+
+
+\bibliographystyle{unsrt}
+\bibliography{referinte}
+
+% \appendix
+
+\end{document}
+
