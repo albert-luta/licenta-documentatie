@@ -1,0 +1,6 @@
+drive: https://drive.google.com/drive/folders/1BT2tAB_bk--OPSDeaaed9P90t5zgR2-_
+
+lab:
+	- 2: https://docs.google.com/document/d/1PwfiiNPy2PdMen9TPZonBV4_uLduMjYk/edit
+	- 3: https://docs.google.com/document/d/19g19k-QjIX6IBHV1pdWYG32NEwr5PsJJ/edit
+	- 4: https://docs.google.com/document/d/1wNle5IdkJxNR5COhu_9U-nMFpzWRgOM2/edit
