@@ -77,7 +77,7 @@
 \titlulobtinut{Inginer}
 \director{Ş.L.Dr.Ing. Elena Cristina STOICA} 
 
-\submissionmonth{Iunie} 
+\submissionmonth{Septembrie} 
 \submissionyear{2021} 
 
 \beforepreface
@@ -109,114 +109,133 @@
 
 \section{Scopul Proiectului}
 
-Contextul actual a accelerat, fie că ne-am dorit sau nu, procesul de învăţare online. Chiar dacă mulţi dintre elevi şi profesori nu au fost pregătiţi pentru asta, unii nici nu şi-au dorit, acum predarea prin intermediul internetului a devenit o necesitate.\cite{liferoplatform}
-
-Proiectul are rolul de a crea o platforma prin care universitatile sa isi poata desfasura activitatea de predare si testare intr-un mod usor, rapid si eficient.
+Proiectul are ca scop dezvoltarea unei aplicatii web e-learning, cu ajutorul careia universitatile sa-si poata desfasura activitatea de predare/testare si in mediu online. Aceasta metoda nu are rolul de a inlocui desfasurarea activitii in mediu fizic, ci de a o imbunatati. Spre exemplu, studentii pot avea acces de oriune si oricand la materialele si notele fiecarei materii, iar profesorii pot primi temele si proiectele pentru curs, seminar sau laborator online, fara a  mai fi nevoie sa transporte foile de hartie ale fiecarui student. Cu toate acestea, mediul online prezinta dezavantaje in momentul testarii/examinarii cunostintelor proprii ale studentilor, deoarece comunicarea online este foarte greu sau chiar imposibil de oprit. Din acest motiv, consider ca examinarile fizice sunt cea mai buna modalitate in aces caz, iar cele online pot fi pastrate pentru simulari, exercitii propuse sau variante din ani trecuti ai examenului.
 
 \section{Descrierea proiectului}
 
-Se va dezvolta o aplicatie web, cu ajutorul careia universitatile isi vor putea adauga si imparti utilizatorii in 3 roluri: Administrator, Profesor si Student. In functie de acest rol, vor exista functionalitati diferite prin care un utilizator poate interactiona cu platforma.
-
-Studentii vor avea acces in orice moment la materialele atasate de catre profesori, pentru studiul independent in afara orelor de curs si pentru o aprofundare mai buna a materiei. Acestia vor putea accesa sarcinile la care sunt atribuiti de catre profesor si vor putea incarca pana la o data limita materialele la care au lucrat, ulterior fiind notati. Testele se vor tine in aproximativ aceeasi maniera, va exista o data de incepere si una de inchidere a testului, timp in care studentii vor trebui sa raspunda la toate intrebarile pentru a obtine punctajul maxim.
-
-Profesorii vor putea atasa materiale, crea si configura sarcini de lucru si teste pentru studenti. Acestia vor avea posibilitatea de a imparti intr-un mod logic materialele in functie de sectiunile pe care le creeaza la fiecare materie.
-
-Administratorii vor avea avea acces la toate functionalitatile de mai sus, iar pe langa acestea, vor putea adauga utilizatori, configura rolul si materiile de care apartin, crea, edita sau sterge facultati si materii.
-
-Fiind o aplicatie web, am ales sa folosesc integral limbajul de programare TypeScript, atat pentru frontend, cat si pentru backend. Folosing un singur limbaj pentru intreg proiectul, dezvoltarea acestuia devine mai facila.
-
-\chapter{Tehnologii folosite}
-
-În acest capitol se vor prezenta tehnologiile folosite pe parcursul realizării aplicației, cum ar fi: limbaj de programare folosit, framework-uri. Pentru fiecare dintre acestea vor fi prezentate caracteristici importante ce au dus la alegerea lor în realizarea proiectului.
-
-\section{Limbaj de programare}
-
-Dupa 20 de ani de la introducerea sa în comunitatea de programare, JavaScript este acum unul dintre cele mai răspândite limbaje multi-platformă create vreodată. Începând ca un limbaj mic de scriptare pentru adăugarea de interactivitate trivială paginilor web, JavaScript a devenit un limbaj de alegere atât pentru aplicațiile frontend, cât și pentru cele backend de orice dimensiune. În timp ce dimensiunea, domeniul de aplicare și complexitatea programelor scrise în JavaScript au crescut exponențial, capacitatea limbajului JavaScript de a exprima relațiile dintre diferitele unități de cod nu s-a schimbat. Combinată cu semantica destul de particulară a timpului de rulare JavaScript, această nepotrivire între limbă și complexitatea programului a făcut ca dezvoltarea JavaScript să fie o sarcină dificil de gestionat pe scară larga.\cite{typescriptlangorgintro}
-
-Cele mai frecvente tipuri de erori pe care programatorii le scriu pot fi descrise ca erori de tip de date: s-a folosit un anumit tip de valoare în care se aștepta un alt tip de valoare. Acest lucru s-ar putea datora unor greșeli de scriere simple, sau a unor greseli de înțelegere a unui API, a unor ipoteze incorecte despre comportamentul în timpul rulării sau a altor erori. Scopul limbajului TypeScript este de a analiza static programele JavaScript - cu alte cuvinte, un instrument care se asigura ca tipurile de date sunt corecte.\cite{typescriptlangorgintro}\\
-
-Un lucru interesant este faptul ca limbajul TypeScript este un proiect open-source\footnote{Proiect software ``public'' -- oricine are acces de a citi, adauga sau modifica codul sursa, moderat de obicei de un grup restrans}, inceput si mentinut de Microsoft, dar la care poate contribui oricine pe GitHub\footnote{Serviciu de gazduire web pentru proiecte software}.\\
-
-Putem observa mai jos aceeasi functie simpla de suma a doua numere scrisa in cele 2 limbaje, JavaScript si TypeScript. In cazul limbajului JavaScript, functia accepta parametri de orice tip de date, lucru care poate duce la posibile erori daca nu suntem atenti in momentul utilizarii. In cazul TypeScript, compilatorul ne atentioneaza daca tipul de date al argumentelor nu este corect.
-
-\begin{figure}[tb]
-\centering
-\lstinputlisting{cod/suma-2-numere.js}
-\lstinputlisting{cod/suma-2-numere.ts}
-\caption{Comparatie JavaScript - TypeScript}
-\label{fig:comparatie-javascript-typescript}
-\end{figure}
-
-\section{Frontend}
-
-\subsection{React}
-
-React este un framework open-source pentru JavaScript inceput de FaceBook, ce ne permite sa cream rapid un frontend scalabil si usor de utilizat pentru aplicatiile web. Este unul dintre cele mai populare in randul programatorilor dar si al mediului de afaceri, multumita avantajelor sale in dezvoltarea aplicatiilor web\cite{rowebreact}:
-
+Aplicatia permite crearea si managementul unei universitati. In cadrul universitatii pot exista 3 tipuri de utilizatori: utilizator cu rol de administrator, utilizator cu rol de profesor si utilizator cu rol de student, fiecare avand acces la functionalitati diferite.
 \begin{itemize}
-	\item Timp de iteratie mic, ideal pentru companii si proiecte dinamice
-	\item Permite scrierea unui cod modular si reutilizabil
-	\item Usor de scalat si mentinut, ideal pentru proiecte complexe pe care lucreaza mai multe echipe in acelasi timp
-	\item Cunostintele se pot folosi pentru a crea aplicatii mobile native, cu ajutorul framework-ului React Native
+	\item Student:
+		\begin{itemize}
+			\item Accesarea materialelor(cursuri, seminarii, laboratoare)
+			\item Accesarea temelor si incarcarea rezolvarilor
+			\item Participarea la teste si simulari
+			\item Participarea la discutii pe forum
+			\item Vizualizarea notelor
+			\item Vizualizarea viitoarelor activitati
+		\end{itemize}
+	\item Profesor:
+		\begin{itemize}
+			\item Incarcarea materialelor
+			\item Crearea temelor
+			\item Crearea testelor/simularilor
+			\item Notarea studentilor
+			\item Participarea la discutii pe forum
+			\item Impartirea activitatilor(materiale, teme, teste, forum) pe sectiuni
+			\item Crearea setului personal de intrebari si raspunsuri pentru teste
+		\end{itemize}
+	\item Administrator:
+		\begin{itemize}
+			\item Managementul facultatilor
+			\item Managementul materiilor
+			\item Managementul utilizatorilor
+		\end{itemize}
 \end{itemize}
 
-\subsubsection{SPA}
+\chapter{Proiectare}
 
-Single Page Application -- Website-urile create cu ajutorul framework-ului React sunt formate dintr-o singura pagina Html goala si unul sau mai multe fisiere JavaScript care se vor ocupa de afisarea si interactiunea elementelor din pagina. Acest lucru vine atat cu avantaje, cat si cu dezavantaje.
+% \chapter{Tehnologii folosite}
 
-Avantajul principal este interactivitatea, odata ce codul JavaScript a fost descarcat si rulat, aplicatia se va simti exact ca una nativa, totul va fi fluid, instant si nu se va mai astepta dupa incarcarea paginilor, aceasta facandu-se ``virtual'' de catre codul JavaScript(in realitate totul se intampla intr-o singura pagina -- root(index.html)).
+% În acest capitol se vor prezenta tehnologiile folosite pe parcursul realizării aplicației, cum ar fi: limbaj de programare folosit, framework-uri. Pentru fiecare dintre acestea vor fi prezentate caracteristici importante ce au dus la alegerea lor în realizarea proiectului.
 
-Dezavantajele principale sunt reprezentate de SEO si FCP. Deoarece pagina initiala este goala(inainte sa ruleze codul JavaScript pe browser), algoritmii de indexare nu vor putea detecta continutul de pe pagina(deoarece inca nu exista), iar pagina va primi un scor mic. Aceasta problema se resimte defapt decat in momentul in care vrem sa avem mai multe pagini care sa fie corect indexate(ex: un magazin online). Deoarece tot codul JavaScript trebuie descarcat si rulat inainte sa putem vedea ceva pe pagina, in cazul conexiunilor slabe la internet sau a dispozitivelor cu putere de procesare mica, timpul pana in momentul in care elementele de pe pagina vor fi vizibile si interactive s-ar putea sa devina mare.
+% \section{Limbaj de programare}
 
-\subsection{Next}
+% Dupa 20 de ani de la introducerea sa în comunitatea de programare, JavaScript este acum unul dintre cele mai răspândite limbaje multi-platformă create vreodată. Începând ca un limbaj mic de scriptare pentru adăugarea de interactivitate trivială paginilor web, JavaScript a devenit un limbaj de alegere atât pentru aplicațiile frontend, cât și pentru cele backend de orice dimensiune. În timp ce dimensiunea, domeniul de aplicare și complexitatea programelor scrise în JavaScript au crescut exponențial, capacitatea limbajului JavaScript de a exprima relațiile dintre diferitele unități de cod nu s-a schimbat. Combinată cu semantica destul de particulară a timpului de rulare JavaScript, această nepotrivire între limbă și complexitatea programului a făcut ca dezvoltarea JavaScript să fie o sarcină dificil de gestionat pe scară larga.\cite{typescriptlangorgintro}
 
-Next este un framework open-source pentru React inceput de Vercel, ce ne permite sa utilizam SSR, SSG si ISR usor in cadrul React, pentru a putea optimiza atat performanta, cat si SEO-ul website-urilor. Principalele avantaje sunt:
+% Cele mai frecvente tipuri de erori pe care programatorii le scriu pot fi descrise ca erori de tip de date: s-a folosit un anumit tip de valoare în care se aștepta un alt tip de valoare. Acest lucru s-ar putea datora unor greșeli de scriere simple, sau a unor greseli de înțelegere a unui API, a unor ipoteze incorecte despre comportamentul în timpul rulării sau a altor erori. Scopul limbajului TypeScript este de a analiza static programele JavaScript - cu alte cuvinte, un instrument care se asigura ca tipurile de date sunt corecte.\cite{typescriptlangorgintro}\\
 
-\begin{itemize}
-	\item SSR, SSG, ISR
-	\item Împărțirea automată a codului
-	\item Optimizare automata a imaginilor
-\end{itemize}
+% Un lucru interesant este faptul ca limbajul TypeScript este un proiect open-source\footnote{Proiect software ``public'' -- oricine are acces de a citi, adauga sau modifica codul sursa, moderat de obicei de un grup restrans}, inceput si mentinut de Microsoft, dar la care poate contribui oricine pe GitHub\footnote{Serviciu de gazduire web pentru proiecte software}.\\
 
-\subsubsection{CSR, SSR, SSG, ISR}
+% Putem observa mai jos aceeasi functie simpla de suma a doua numere scrisa in cele 2 limbaje, JavaScript si TypeScript. In cazul limbajului JavaScript, functia accepta parametri de orice tip de date, lucru care poate duce la posibile erori daca nu suntem atenti in momentul utilizarii. In cazul TypeScript, compilatorul ne atentioneaza daca tipul de date al argumentelor nu este corect.
 
-CSR(Client Side Rendering) -- Modul implicit de functionare al framework-ului React, cand utilizatorul acceseaza aplicatia web, browser-ul primeste o pagina goala(index.html) pe care va incepe sa o parseze. Cand ajunge la tag-ul ``script'' va trimite un request pentru fisierul JavaScript, pe care ulterior il ruleaza. Dupa ce se termina rularea, pagina va deveni interactiva.\\
+% \begin{figure}[tb]
+% \centering
+% \lstinputlisting{cod/suma-2-numere.js}
+% \lstinputlisting{cod/suma-2-numere.ts}
+% \caption{Comparatie JavaScript - TypeScript}
+% \label{fig:comparatie-javascript-typescript}
+% \end{figure}
 
-SSR(Server Side Rendering) -- La primul request al utilizatorului catre server, in loc sa primeasca o pagina goala, serverul ruleaza codul JavaScript, care va construi o noua pagina Html si pe care o va livra in locul paginii goale. Acest lucru ajuta algoritmii de indexare sa ofere un scor corect paginilor.\\
+% \section{Frontend}
 
-SSG(Static Site Generation) -- Serverul va realiza aceeasi operatiune ca la SSR, doar ca in loc sa se intample cand utilizatorul acceseaza pagina, se va intampla in prealabil, intr-un proces numit build\footnote{Compilarea tuturor fisierelor sursa in fisiere executabile}.\\
+% \subsection{React}
 
-ISR(Incremental Static Regeneration) -- O combinatie intre SSR si SSG, in care nu toate paginile se construiesc la buid, ci doar cele pe care le alegem, restul fiind construite in momentul in care un oarecare utilizator vrea sa o acceseze, aceasta va fi salvata pentru a fi servita si urmatorilor utilizatori.
+% React este un framework open-source pentru JavaScript inceput de FaceBook, ce ne permite sa cream rapid un frontend scalabil si usor de utilizat pentru aplicatiile web. Este unul dintre cele mai populare in randul programatorilor dar si al mediului de afaceri, multumita avantajelor sale in dezvoltarea aplicatiilor web\cite{rowebreact}:
 
-\subsubsection{Împărțirea automată a codului}
+% \begin{itemize}
+% 	\item Timp de iteratie mic, ideal pentru companii si proiecte dinamice
+% 	\item Permite scrierea unui cod modular si reutilizabil
+% 	\item Usor de scalat si mentinut, ideal pentru proiecte complexe pe care lucreaza mai multe echipe in acelasi timp
+% 	\item Cunostintele se pot folosi pentru a crea aplicatii mobile native, cu ajutorul framework-ului React Native
+% \end{itemize}
 
-In mod implicit, in momentul de build se va crea un singur fisier executabil din cele sursa, care va contine codul pentru toate paginile. Acest lucru va face ca indiferent ce pagina va fi accesata de catre utilizator, acesta sa primeasca codul pentru toate. Next optimizeaza automat acest lucru, creand mai multe fisiere executabile, in functie de pagina accesata. Astfel, utilizatorul va primi doar codul de care are strict nevoie pentru a rula pagina respectiva.
+% \subsubsection{SPA}
 
-\subsubsection{Optimizare automata a imaginilor}
+% Single Page Application -- Website-urile create cu ajutorul framework-ului React sunt formate dintr-o singura pagina Html goala si unul sau mai multe fisiere JavaScript care se vor ocupa de afisarea si interactiunea elementelor din pagina. Acest lucru vine atat cu avantaje, cat si cu dezavantaje.
 
-Optimizarea automată a imaginilor permite redimensionarea, optimizarea și servirea imaginilor în formate moderne precum WebP atunci când browserul o acceptă. Acest lucru evită transportul de imagini mari pe dispozitive cu o fereastră mai mică. De asemenea, imaginile sunt incarcate lenes\footnote{Imaginile sunt incarcate doar in momentul in care ar trebui sa le vedem}.\cite{nextimageoptimization}
+% Avantajul principal este interactivitatea, odata ce codul JavaScript a fost descarcat si rulat, aplicatia se va simti exact ca una nativa, totul va fi fluid, instant si nu se va mai astepta dupa incarcarea paginilor, aceasta facandu-se ``virtual'' de catre codul JavaScript(in realitate totul se intampla intr-o singura pagina -- root(index.html)).
 
-\section{Backend}
+% Dezavantajele principale sunt reprezentate de SEO si FCP. Deoarece pagina initiala este goala(inainte sa ruleze codul JavaScript pe browser), algoritmii de indexare nu vor putea detecta continutul de pe pagina(deoarece inca nu exista), iar pagina va primi un scor mic. Aceasta problema se resimte defapt decat in momentul in care vrem sa avem mai multe pagini care sa fie corect indexate(ex: un magazin online). Deoarece tot codul JavaScript trebuie descarcat si rulat inainte sa putem vedea ceva pe pagina, in cazul conexiunilor slabe la internet sau a dispozitivelor cu putere de procesare mica, timpul pana in momentul in care elementele de pe pagina vor fi vizibile si interactive s-ar putea sa devina mare.
 
-\subsection{Node}
+% \subsection{Next}
 
-Node este un runtime pentru limbajul JavaScript, baza pe eveniment - asincron, open-source si cross-platform\footnote{Poate rula pe mai multe sisteme de operare}. Bazat pe V8\footnote{JavaScript open-source engine inceput de The Chromium Project}, este folosit pentru a construi rapid servere web folosing JavaScript. Folosind un singur limbaj de programare atat pentru frontend, cat si pentru backend, companiile isi pot dezvolta mai rapid si cu mai putine resurse proiectele.
+% Next este un framework open-source pentru React inceput de Vercel, ce ne permite sa utilizam SSR, SSG si ISR usor in cadrul React, pentru a putea optimiza atat performanta, cat si SEO-ul website-urilor. Principalele avantaje sunt:
 
-\subsection{Express}
+% \begin{itemize}
+% 	\item SSR, SSG, ISR
+% 	\item Împărțirea automată a codului
+% 	\item Optimizare automata a imaginilor
+% \end{itemize}
 
-Express este un framework rapid si minimalist de backend pentru JavaScript, orientat in principal pentru dezvoltarea de API-uri REST, dar suporta si livrarea de pagini web statice sau dinamice. Acesta usureaza si grabeste dezvoltarea in Node a serverelor web.
+% \subsubsection{CSR, SSR, SSG, ISR}
 
-\subsection{Nest}
+% CSR(Client Side Rendering) -- Modul implicit de functionare al framework-ului React, cand utilizatorul acceseaza aplicatia web, browser-ul primeste o pagina goala(index.html) pe care va incepe sa o parseze. Cand ajunge la tag-ul ``script'' va trimite un request pentru fisierul JavaScript, pe care ulterior il ruleaza. Dupa ce se termina rularea, pagina va deveni interactiva.\\
 
-Nest este un framework pentru Node, care se bazeaza pe Express, dar care promoveaza o arhitectura curata si scalabila pentru proiecte mai complexe. Acesta vine cu solutii incorporate la cele mai des intalnite probleme si se foloseste de TypeScript pentru a oferi un API sigur, descriptiv, intuitiv si usor de mentinut de una sau mai multe echipe mari.
+% SSR(Server Side Rendering) -- La primul request al utilizatorului catre server, in loc sa primeasca o pagina goala, serverul ruleaza codul JavaScript, care va construi o noua pagina Html si pe care o va livra in locul paginii goale. Acest lucru ajuta algoritmii de indexare sa ofere un scor corect paginilor.\\
 
-\subsection{GraphQL}
+% SSG(Static Site Generation) -- Serverul va realiza aceeasi operatiune ca la SSR, doar ca in loc sa se intample cand utilizatorul acceseaza pagina, se va intampla in prealabil, intr-un proces numit build\footnote{Compilarea tuturor fisierelor sursa in fisiere executabile}.\\
 
-GraphQL este un limbaj de interogare pentru API-uri și un runtime pentru îndeplinirea acelor interogări. Acesta oferă o descriere completă și ușor de înțeles a datelor din API, oferă frontend-ului puterea de a cere exactce are nevoie și nimic mai mult, face mai ușoară dezvoltarea API-urilor în timp și ofera instrumente puternice pentru dezvoltatori.
+% ISR(Incremental Static Regeneration) -- O combinatie intre SSR si SSG, in care nu toate paginile se construiesc la buid, ci doar cele pe care le alegem, restul fiind construite in momentul in care un oarecare utilizator vrea sa o acceseze, aceasta va fi salvata pentru a fi servita si urmatorilor utilizatori.
 
-Permite clienților să definească structura datelor necesare, iar aceeași structură a datelor este returnată de la server, împiedicând astfel returnarea unor cantități excesiv de mari de date, dar acest lucru are implicații pentru cât de eficientă poate fi operatiunea de caching a rezultatelor interogării . Flexibilitatea și bogăția limbajului de interogare adaugă, de asemenea, o complexitate care poate nu merită pentru API-urile simple. 
+% \subsubsection{Împărțirea automată a codului}
 
-\chapter{Securitate}
+% In mod implicit, in momentul de build se va crea un singur fisier executabil din cele sursa, care va contine codul pentru toate paginile. Acest lucru va face ca indiferent ce pagina va fi accesata de catre utilizator, acesta sa primeasca codul pentru toate. Next optimizeaza automat acest lucru, creand mai multe fisiere executabile, in functie de pagina accesata. Astfel, utilizatorul va primi doar codul de care are strict nevoie pentru a rula pagina respectiva.
+
+% \subsubsection{Optimizare automata a imaginilor}
+
+% Optimizarea automată a imaginilor permite redimensionarea, optimizarea și servirea imaginilor în formate moderne precum WebP atunci când browserul o acceptă. Acest lucru evită transportul de imagini mari pe dispozitive cu o fereastră mai mică. De asemenea, imaginile sunt incarcate lenes\footnote{Imaginile sunt incarcate doar in momentul in care ar trebui sa le vedem}.\cite{nextimageoptimization}
+
+% \section{Backend}
+
+% \subsection{Node}
+
+% Node este un runtime pentru limbajul JavaScript, baza pe eveniment - asincron, open-source si cross-platform\footnote{Poate rula pe mai multe sisteme de operare}. Bazat pe V8\footnote{JavaScript open-source engine inceput de The Chromium Project}, este folosit pentru a construi rapid servere web folosing JavaScript. Folosind un singur limbaj de programare atat pentru frontend, cat si pentru backend, companiile isi pot dezvolta mai rapid si cu mai putine resurse proiectele.
+
+% \subsection{Express}
+
+% Express este un framework rapid si minimalist de backend pentru JavaScript, orientat in principal pentru dezvoltarea de API-uri REST, dar suporta si livrarea de pagini web statice sau dinamice. Acesta usureaza si grabeste dezvoltarea in Node a serverelor web.
+
+% \subsection{Nest}
+
+% Nest este un framework pentru Node, care se bazeaza pe Express, dar care promoveaza o arhitectura curata si scalabila pentru proiecte mai complexe. Acesta vine cu solutii incorporate la cele mai des intalnite probleme si se foloseste de TypeScript pentru a oferi un API sigur, descriptiv, intuitiv si usor de mentinut de una sau mai multe echipe mari.
+
+% \subsection{GraphQL}
+
+% GraphQL este un limbaj de interogare pentru API-uri și un runtime pentru îndeplinirea acelor interogări. Acesta oferă o descriere completă și ușor de înțeles a datelor din API, oferă frontend-ului puterea de a cere exactce are nevoie și nimic mai mult, face mai ușoară dezvoltarea API-urilor în timp și ofera instrumente puternice pentru dezvoltatori.
+
+% Permite clienților să definească structura datelor necesare, iar aceeași structură a datelor este returnată de la server, împiedicând astfel returnarea unor cantități excesiv de mari de date, dar acest lucru are implicații pentru cât de eficientă poate fi operatiunea de caching a rezultatelor interogării . Flexibilitatea și bogăția limbajului de interogare adaugă, de asemenea, o complexitate care poate nu merită pentru API-urile simple. 
+
+\chapter{Implementare}
 
 \chapter*{Concluzii}
 \addcontentsline{toc}{chapter}{Concluzii}
