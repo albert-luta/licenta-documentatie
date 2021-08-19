@@ -1,4 +1,5 @@
-drive: https://drive.google.com/drive/folders/1BT2tAB_bk--OPSDeaaed9P90t5zgR2-_
+drive: https://drive.google.com/drive/folders/1TqVcMYzm7xZ7azoemTn-fy2kE7RmzK2p
+	- curs 4 - p40/49
 
 lab:
 	- 2: https://docs.google.com/document/d/1PwfiiNPy2PdMen9TPZonBV4_uLduMjYk/edit

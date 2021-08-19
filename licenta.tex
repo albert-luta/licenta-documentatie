@@ -2,10 +2,10 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 \usepackage{babel}
-\usepackage{graphicx}
-\usepackage{babel}
 \usepackage{color}
 \usepackage{graphicx}
+\usepackage{float}
+\graphicspath{ {./imagini/} }
 \usepackage{indentfirst}
 \usepackage[
   bookmarks,
@@ -115,7 +115,7 @@ Proiectul are ca scop dezvoltarea unei aplicatii web e-learning, cu ajutorul car
 
 Aplicatia permite crearea si managementul unei universitati. In cadrul universitatii pot exista 3 tipuri de utilizatori: utilizator cu rol de administrator, utilizator cu rol de profesor si utilizator cu rol de student, fiecare avand acces la functionalitati diferite.
 \begin{itemize}
-	\item Student:
+	\item Student
 		\begin{itemize}
 			\item Accesarea materialelor(cursuri, seminarii, laboratoare)
 			\item Accesarea temelor si incarcarea rezolvarilor
@@ -124,7 +124,7 @@ Aplicatia permite crearea si managementul unei universitati. In cadrul universit
 			\item Vizualizarea notelor
 			\item Vizualizarea viitoarelor activitati
 		\end{itemize}
-	\item Profesor:
+	\item Profesor
 		\begin{itemize}
 			\item Incarcarea materialelor
 			\item Crearea temelor
@@ -134,7 +134,7 @@ Aplicatia permite crearea si managementul unei universitati. In cadrul universit
 			\item Impartirea activitatilor(materiale, teme, teste, forum) pe sectiuni
 			\item Crearea setului personal de intrebari si raspunsuri pentru teste
 		\end{itemize}
-	\item Administrator:
+	\item Administrator
 		\begin{itemize}
 			\item Managementul facultatilor
 			\item Managementul materiilor
@@ -143,6 +143,72 @@ Aplicatia permite crearea si managementul unei universitati. In cadrul universit
 \end{itemize}
 
 \chapter{Proiectare}
+
+Inainte de a trece la implementarea propriu-zisa a proiectului, trebuie sa intelegem foarte bine cerintele si metodele prin care acesta va fi construit. Aceasta treapta preliminara implementarii se numeste proiectare, si a devenit din ce in ce mai importanta cu cat programele software au devenit mai complexe.
+
+Proiectarea software reprezinta procesul de gasire a solutiilor conceptuale pentru realizarea unei aplicatii, pe baza unui set de cerinte si asteptari. Acest pas poate reduce costurile si timpul de implementare, in cazul unor neintelegeri initiale sau a unor schimbari de cerinte, si usureaza procesul de estimare al timpului si costului de realizare al intregului proiect.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.55\columnwidth]{proiectare-software-model-cascada}
+\caption{Proiectare Software - Model Cascada}
+\label{proiectare-software-model-cascada}
+\end{figure}
+
+\section{Functionalitati Administrator}
+
+Reiterand functionalitatile utilizatorilor cu rol de administrator de mai sus, vom dezvolta diagrame de tip use-case\footnote{Caz de utilizare - prezentarea functionalitatii sistemului} pentru a acomoda urmatoarele cerinte:
+\begin{itemize}
+	\item Managementul facultatilor
+	\item Managementul materiilor
+	\item Managementul utilizatorilor
+\end{itemize}
+
+\subsection{Structura universitatii}
+
+Inainte de a putea face managementul utilizatorilor, administratorul este nevoit sa defineasca structura universitatii - facultatile si materiile componente. Acesta va putea adauga facultati, iar pentru fiecare dintre acestea va putea adauga materiile asociate. In continuare vom prezenta diagramele use-case si de activitate ale acestui proces.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.5\columnwidth]{diagrama-use-case-creeaza-structura-universitatii}
+\caption{Diagrama Use-Case - Creeaza Structura Universitatii}
+\label{diagrama-use-case-creeaza-structura-universitatii}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.5\columnwidth]{diagrama-activitate-creeaza-structura-universitatii}
+\caption{Diagrama Activitate - Creeaza Structura Universitatii}
+\label{diagrama-activitate-creeaza-structura-universitatii}
+\end{figure}
+
+\subsection{Managementul utilizatorilor}
+
+Odata stabilita structura universitatii, administratorul va putea adauga utilizatori, le va putea atribui un anumit rol si ii va putea repartiza la facultatile si materiile la care vor avea acces. In continuare vom prezenta diagramele use-case si de activitate ale acestui proces.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.525\columnwidth]{diagrama-use-case-adauga-utilizator}
+\caption{Diagrama Use-Case - Adauga Utilizator}
+\label{diagrama-use-case-adauga-utilizator}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.6\columnwidth]{diagrama-activitate-adauga-utilizator}
+\caption{Diagrama Activitate - Adauga Utilizator}
+\label{diagrama-activitate-adauga-utilizator}
+\end{figure}
+
+
+
+% diagrame use case + de activitati
+% sterge asta dupa ce folosesti o data cite
+Sterge de aici\cite{typescriptlangorgintro}
+
+\chapter{Implementare}
 
 % \chapter{Tehnologii folosite}
 
@@ -235,7 +301,6 @@ Aplicatia permite crearea si managementul unei universitati. In cadrul universit
 
 % Permite clienților să definească structura datelor necesare, iar aceeași structură a datelor este returnată de la server, împiedicând astfel returnarea unor cantități excesiv de mari de date, dar acest lucru are implicații pentru cât de eficientă poate fi operatiunea de caching a rezultatelor interogării . Flexibilitatea și bogăția limbajului de interogare adaugă, de asemenea, o complexitate care poate nu merită pentru API-urile simple. 
 
-\chapter{Implementare}
 
 \chapter*{Concluzii}
 \addcontentsline{toc}{chapter}{Concluzii}
