@@ -155,9 +155,9 @@ Proiectarea software reprezinta procesul de gasire a solutiilor conceptuale pent
 \label{proiectare-software-model-cascada}
 \end{figure}
 
-\section{Functionalitati Administrator}
+\section{Functionalitati administrator}
 
-Reiterand functionalitatile utilizatorilor cu rol de administrator de mai sus, vom dezvolta diagrame de tip use-case\footnote{Caz de utilizare - prezentarea functionalitatii sistemului} pentru a acomoda urmatoarele cerinte:
+Reiterand functionalitatile utilizatorilor cu rol de administrator de mai sus, vom dezvolta diagrame de tip use-case\footnote{Caz de utilizare - prezentarea functionalitatii sistemului} si activitate pentru a acomoda urmatoarele cerinte:
 \begin{itemize}
 	\item Managementul facultatilor
 	\item Managementul materiilor
@@ -202,6 +202,143 @@ Odata stabilita structura universitatii, administratorul va putea adauga utiliza
 \label{diagrama-activitate-adauga-utilizator}
 \end{figure}
 
+
+
+\section{Functionalitati profesor}
+
+Reiterand functionalitatile utilizatorilor cu rol de profesor de mai sus, vom dezvolta diagrame de tip use-case pentru a acomoda urmatoarele cerinte:
+\begin{itemize}
+	\item Incarcarea materialelor
+	\item Crearea temelor
+	\item Crearea testelor/simularilor
+	\item Notarea studentilor
+	\item Impartirea activitatilor(materiale, teme, teste, forum) pe sectiuni
+	\item Crearea setului personal de intrebari si raspunsuri pentru teste
+\end{itemize}
+
+\subsection{Crearea activitatilor}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.9\columnwidth]{diagrama-use-case-creeaza-activitate}
+\caption{Diagrama Use-Case - Creeaza Activitate}
+\label{diagrama-use-case-creeaza-activitate}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.65\columnwidth]{diagrama-activitate-creeaza-activitate}
+\caption{Diagrama Activitate - Creeaza Activitate}
+\label{diagrama-activitate-creeaza-activitate}
+\end{figure}
+
+
+\subsection{Notarea studentilor}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.65\columnwidth]{diagrama-use-case-noteaza-student}
+\caption{Diagrama Use-Case - Noteaza Student}
+\label{diagrama-use-case-noteaza-student}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.45\columnwidth]{diagrama-activitate-noteaza-student}
+\caption{Diagrama Activitate - Noteaza Student}
+\label{diagrama-activitate-noteaza-student}
+\end{figure}
+
+\subsection{Crearea setului personal de intrebari}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.3\columnwidth]{diagrama-use-case-creeaza-set-personal-de-intrebari}
+\caption{Diagrama Use-Case - Creeaza Set Personal de Intrebari}
+\label{diagrama-use-case-creeaza-set-personal-de-intrebari}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.75\columnwidth]{diagrama-activitate-creeaza-set-personal-de-intrebari}
+\caption{Diagrama Activitate - Creeaza Set Personal de Intrebari}
+\label{diagrama-activitate-creeaza-set-personal-de-intrebari}
+\end{figure}
+
+\section{Functionalitati student}
+
+Reiterand functionalitatile utilizatorilor cu rol de student de mai sus, vom dezvolta diagrame de tip use-case pentru a acomoda urmatoarele cerinte:
+\begin{itemize}
+	\item Accesarea materialelor(cursuri, seminarii, laboratoare)
+	\item Accesarea temelor si incarcarea rezolvarilor
+	\item Participarea la teste si simulari
+	\item Vizualizarea notelor
+\end{itemize}
+
+\subsection{Accesarea detaliilor fiecarei activitati}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{diagrama-use-case-acceseaza-activitate}
+\caption{Diagrama Use-Case - Acceseaza Activitate}
+\label{diagrama-use-case-acceseaza-activitate}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.6\columnwidth]{diagrama-activitate-acceseaza-activitate}
+\caption{Diagrama Activitate - Acceseaza Activitate}
+\label{diagrama-activitate-acceseaza-activitate}
+\end{figure}
+
+\subsection{Incarcarea rezolvarilor pentru teme}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.5\columnwidth]{diagrama-use-case-incarca-rezolvare-tema}
+\caption{Diagrama Use-Case - Incarca Rezolvare Tema}
+\label{diagrama-use-case-incarca-rezolvare-tema}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.55\columnwidth]{diagrama-activitate-incarca-rezolvare-tema}
+\caption{Diagrama Activitate - Incarca Rezolvare Tema}
+\label{diagrama-activitate-incarca-rezolvare-tema}
+\end{figure}
+
+
+\subsection{Participarea la teste}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.75\columnwidth]{diagrama-use-case-participa-la-test}
+\caption{Diagrama Use-Case - Participa la Test}
+\label{diagrama-use-case-participa-la-test}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.75\columnwidth]{diagrama-activitate-participa-la-test}
+\caption{Diagrama Activitate - Participa la Test}
+\label{diagrama-activitate-participa-la-test}
+\end{figure}
+
+\section{Functionalitati comune}
+
+\begin{itemize}
+	\item Participarea la discutii pe forum
+	\item Vizualizarea viitoarelor activitati
+\end{itemize}
+
+\subsection{Participarea la discutii pe forum}
+\subsection{Vizualizarea viitoarelor activitati}
 
 
 % diagrame use case + de activitati
