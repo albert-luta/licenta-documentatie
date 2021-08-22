@@ -101,6 +101,14 @@
 	SEO = Search Engine Optimization
 
 	FCP = First Contentful Paint
+
+	TCP = Transmission Control Protocol
+
+	UI = User Interface
+
+	ORM = Object-relational Mapping
+
+	SGBD = Sistem de gestiune a bazei de date
 }
 \afterpreface 
 
@@ -352,10 +360,39 @@ Reiterand functionalitatile utilizatorilor cu rol de student de mai sus, vom dez
 \label{diagrama-activitate-participa-la-forum}
 \end{figure}
 
+\chapter{Implementare}
+
+Fiind o aplicatie web, am folosit arhitectura standard de construire a acestora "client-server". Aceasta imparte aplicatia in doua parti, fiecare avand un rol separat, comunicand intre ele prin conexiuni TCP. Partea de client se refera la interfata vizuala cu care interactioneaza un utilizator in momentul folosirii, iar partea de server se refera la codul care ruleaza pe un calculator, de obicei in cloud\footnote{Ansamblu distribuit de servicii de calcul}, care raspunde cererilor primite de la client, cel din urma stocand datele necesare rularii aplicatiei, de cele mai multe ori intr-o baza de date.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.7\columnwidth]{arhitectura-client-server}
+\caption{Arhitectura Client-Server}
+\label{arhitectura-client-server}
+\end{figure}
+
+Fiind termeni deja standardizati in aceasta industrie, in continuare vom folosi frontend cand discutam de partea de client si backend cand discutam de partea de server. \\
+
+Intreaga aplicatie este construita folosing limbajul TypeScript, atat pe frontend, cat si pe backend, acesta fiind un superset\footnote{Un limbaj de programare care conține toate caracteristicile unui limbaj dat și a fost extins sau îmbunătățit pentru a include și alte caracteristici.} al limbajulului JavaScript, care ne ofera un sistem sigur pentru tipuri de date.
+
+Tehnologiile pe care le-am folosit pentru frontend sunt:
+\begin{itemize}
+	\item React - Librarie de JavaScript pentru construirea interfețelor vizuale complexe
+	\item Next - Framework\footnote{Un produs software care ofera functionalitati generice pentru construirea mai facila a aplicatiilor} de React, care ne ofera o multime de unelte de optimizare
+	\item Material-UI - Librarie de componente UI de React, bazata pe design-ul celor de la Google(Material Design)
+	\item Apollo Client - Librarie de React, care ne ajuta la folosirea unui API de tip GraphQL
+\end{itemize}
+
+Tehnologiile pe care le-am folosit pentru backend sunt:
+\begin{itemize}
+	\item Node - Mediu de executie pentru JavaScript, care ne va ajuta la construirea unui backend
+	\item Nest - Framework de JavaScript, care ne va ajuta la construirea unui API de tip GraphQL
+	\item PostgreSQL - SGBD open-source\footnote{Proiect software ``public'' -- oricine are acces pentru a citi, adauga sau modifica codul sursa, moderat de obicei de un grup restrans}
+	\item Prisma - ORM de JavaScript, care ne va ajuta in gestionarea bazei de date
+\end{itemize}
+
 % sterge asta dupa ce folosesti o data cite
 Sterge de aici\cite{typescriptlangorgintro}
-
-\chapter{Implementare}
 
 % \chapter{Tehnologii folosite}
 
