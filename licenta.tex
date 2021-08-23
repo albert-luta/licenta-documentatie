@@ -455,6 +455,67 @@ Daca oricare dintre cele 2 validari gasesc erori, acestea vor fi afisate utiliza
 
 \section{Functionalitati administrator}
 
+Odata autentificat, utilizatorul va fi intampinat cu un tablou de bord, de unde isi poate alege una din universitatile la care este inrolat si doreste sa participe, aceasta va fi functionalitatea cea mai des folosita, sau chiar isi poate creea o universitate la care va participa cu rol de administrator, functionalitate destinata conturilor de administrator de universitate.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-utilizator}
+\caption{Tablou de bord Utilizator}
+\label{tablou-de-bord-utilizator}
+\end{figure}
+
+Acest tablou este format din 2 componente, o bara de instrumente si lista cu universitati.\\
+
+Bara de instrumente este formata din 2 elemente: 1 buton cu datele utilizatorului, care va redirectiona spre acest tablou de bord, si o iconita de meniu, care va contine un buton pentru delogare.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-utilizator-bara-de-instrumente}
+\caption{Tablou de bord Utilizator - Bara de instrumente}
+\label{tablou-de-bord-utilizator-bara-de-instrumente}
+\end{figure}
+
+Lista cu universitati va afisa toate universitatile la care utilizatorul este inrolat, grupate dupa rolul pe care acesta il detine in cadrul universitatii. Iconita de adaugat din dreapta titlului va deschide formular de creare a unei noi universitati avand campurile nume si logo(optional). Fiecare universitate in parte este formata dintr-un buton, care va redirectiona spre tabloul de bord al universitatii, si dintr-un care va deschide un meniu special. In functie de rolul pe care il detinem in cadrul universitatii, acest meniu va contine functionalitati diferite.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-utilizator-lista-universitati}
+\caption{Tablou de bord Utilizator - Lista Universitati}
+\label{tablou-de-bord-utilizator-lista-universitati}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.6\columnwidth]{tablou-de-bord-utilizator-formular-creare-universitate}
+\caption{Tablou de bord Utilizator - Formular Creare Universitate}
+\label{tablou-de-bord-utilizator-formular-creare-universitate}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.15\columnwidth]{tablou-de-bord-utilizator-meniu-universitate-administrator}
+\includegraphics*[width=0.15\columnwidth]{tablou-de-bord-utilizator-meniu-universitate-profesor-student}
+\caption{Tablou de bord Utilizator - Meniu Universitate Administrator(stanga), Profesor/Student(dreapta)}
+\label{tablou-de-bord-utilizator-meniu-universitate}
+\end{figure}
+
+Butonul editare(edit) va deschide un formular de editare al universitatii, cel de parasire(leave) va scoate utilizatorul din lista universitatii, iar cel de sterge(delete) va sterge universitatea si orice date asociate. In cazul butoanelor de parasire si stergere, inainte sa se execute comanda, utilizatorul va fi intrebat daca este sigur ca operatia este cea dorita.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.6\columnwidth]{tablou-de-bord-utilizator-formular-editare-universitate}
+\caption{Tablou de bord Utilizator - Formular Editare Universitate}
+\label{tablou-de-bord-utilizator-formular-editare-universitate}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.45\columnwidth]{tablou-de-bord-utilizator-intrebare-siguranta-stergere}
+\includegraphics*[width=0.45\columnwidth]{tablou-de-bord-utilizator-intrebare-siguranta-parasire}
+\caption{Tablou de bord Utilizator - Intrebare siguranta stergere(stanga), parasire(dreapta)}
+\label{tablou-de-bord-utilizator-intrebare-siguranta}
+\end{figure}
+
 \subsection{Structura Universitatii}
 \subsection{Managementul utilizatorilor}
 
