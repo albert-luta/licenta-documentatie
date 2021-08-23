@@ -777,15 +777,69 @@ In cazul forumurilor, se vor afisa comentariile adaugate de participanti, orice 
 
 \subsection{Crearea setului personal de intrebari}
 
+La selectarea Setului personal de intrebari din meniul, utilizatorul va fi redirectionat catre tabloul de bordcu intrebari. Acesta va contine o lista de categorii de intrebari, pentru o mai buna repartizare logica a acestora, iar fiecare categorie va fi o sectiune colapsabila care va contine intrebarile specifice.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-set-intrebari}
+\caption{Tablou de bord Set Intrebari}
+\label{tablou-de-bord-set-intrebari}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.45\columnwidth]{tablou-de-bord-set-intrebari-creare-categorie}
+\includegraphics*[width=0.45\columnwidth]{tablou-de-bord-set-intrebari-editare-categorie}
+\caption{Tablou de bord Set Intrebari - Formular creare(stanga), editare(dreapta) Categorie}
+\label{tablou-de-bord-set-intrebari-categorie}
+\end{figure}
+
+Formularul de creare a unei intrebari cuprinde urmatoarele campuri:
+\begin{itemize}
+	\item Tip de activitate(Type) - care poate fi cu raspuns unic(Single Choice), sau cu raspuns multiplu(Multiple Choice)
+	\item Nume(Name) - numele intrebarii
+	\item Text - textul intrebarii
+	\item Raspunsuri(Answers) - raspunsurile intrebarii, iar pentru fiecare raspunsu trebuie completate 2 campuri
+		\begin{itemize}
+			\item Ordine - ordinea din lista de raspunsuri
+			\item Text - textul raspunsului
+			\item Procentaj/Fractiune - ponderea pe care o are raspunsul respectiv pentru intrebare, poate lua valori intre -100 si 100
+		\end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.7\columnwidth]{tablou-de-bord-set-intrebari-formular-intrebare}
+\caption{Tablou de bord Set Intrebari - Formular Intrebare}
+\label{tablou-de-bord-set-intrebari-formular-intrebare}
+\end{figure}
+
+Pentru o calculare automata corecta a notelor de la teste, exista cateva indicatii care trebuie respectate.
+\begin{itemize}
+	\item Procentajul poate lua valori intre -100 si 100
+	\item Pentru intrebarile cu raspuns unic, doar 1 singur raspuns ar trebui sa aiba procentajul = 100, restul ar trebui sa fie = 0
+	\item Pentru intrebarile cu raspuns multiplu, suma tuturor procentajelor positive ar trebui sa fie = 100
+	\item Pentru intrebarile cu raspuns multiplu, suma tuturor procentajelor negative ar trebui sa fie = -100
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.7\columnwidth]{tablou-de-bord-set-intrebari-indicatii-notare-automata}
+\caption{Tablou de bord Set Intrebari - Indicatii Notare Automata}
+\label{tablou-de-bord-set-intrebari-indicatii-notare-automata}
+\end{figure}
+
 \section{Functionalitati student}
 \subsection{Accesarea detaliilor fiecarei activitati}
 \subsection{Incarcarea rezolvarilor pentru teme}
 \subsection{Participarea la teste}
 
-\section{Functionalitati comune}
-\subsection{Participarea la discutii pe forum}
+
+\section{Baza de date}
 
 \section{Securitate}
+% TODO: do this when you have time - jwt, roles, scopes
+
 
 % TODO: sterge asta dupa ce folosesti o data cite
 Sterge de aici\cite{typescriptlangorgintro}
