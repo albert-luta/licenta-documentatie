@@ -106,6 +106,8 @@
 
 	UI = User Interface
 
+	UX = User Experience
+
 	ORM = Object-relational Mapping
 
 	SGBD = Sistem de gestiune a bazei de date
@@ -390,6 +392,86 @@ Tehnologiile pe care le-am folosit pentru backend sunt:
 	\item PostgreSQL - SGBD open-source\footnote{Proiect software ``public'' -- oricine are acces pentru a citi, adauga sau modifica codul sursa, moderat de obicei de un grup restrans}
 	\item Prisma - ORM de JavaScript, care ne va ajuta in gestionarea bazei de date
 \end{itemize}
+
+In ultimii ani, datorita cresterii utilizarii internetului de pe dispozitivele mobile, dezvoltatorii de aplicatii web au fost nevoiti sa adopte o abordare si un design responsive\footnote{Website-ul poate fi folosit atat de pe ecrane mari(ex. desktop), cat si de pe ecrane mici(ex. telefonul)} cand vine vorba de interfata. Din acest considerent, aplicatia va fi gandita si dezvoltata sa poata fi folosita pe orice dimensiune a ecranului, dar in continuare vom prezenta functionalitatile folosind un ecran mare, deoarece acesta va fi folosit cel mai des de catre utilizatori.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{exemplu-design-responsive-desktop}
+\caption{Exemplu design responsive - Desktop}
+\label{exemplu-design-responsive-desktop}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.4\columnwidth]{exemplu-design-responsive-mobile-menu-closed}
+\includegraphics*[width=0.4\columnwidth]{exemplu-design-responsive-mobile-menu-opened}
+\caption{Exemplu design responsive - Mobile}
+\label{exemplu-design-responsive-mobile}
+\end{figure}
+
+\section{Modulul de Autentificare}
+
+Inainte ca utilizatorii sa poata interactiona cu aplicatia, acestia vor trebui sa-si creeze un cont, sau daca au deja un cont sa se autentifice, cu ajutorul modulului de autentificare. Acesta este compus dintr-o pagina cu 2 functionalitati Logare(Login) si Inregistrare(Register).
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.5\columnwidth]{auth-login}
+\caption{Formular Autentificare}
+\label{formular-autentificare}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.45\columnwidth]{auth-register1}
+\includegraphics*[width=0.45\columnwidth]{auth-register2}
+\caption{Formular Inregistrare}
+\label{formular-inregistrare}
+\end{figure}
+
+Pentru ca un utilizator sa se poate inregistra, acesta va trebui sa completeze urmatoarele campuri:
+\begin{itemize}
+	\item nume de familie
+	\item prenume
+	\item initiala tatalui
+	\item email - unic printre toti utilizatorii
+	\item parola - mai lunga de 6 caractere
+	\item avatar(optional)
+\end{itemize}
+
+Odata inregistrat, acesta se va putea autentifica folosindu-si email-ul si parola.\\
+
+Aceste date, impreuna cu orice alt formular din aplicatie, vor fi validate de 2 ori, 1 data pe frontend si 1 data pe backend. Validarea pe frontend o vom face din motive de UX, utilizatorul va sti daca datele au un format valid si respecte anumite reguli de validare imediat dupa ce termina un anumit camp de completat. Validarea pe backend o vom face din 2 motive, in primul rand pe frontend nu se pot face validarile care tin cont de date din baza de date, spre exemplu nu putem verifica daca email-ul introdus este unic, iar in al doilea rand, reprezinta o metoda de protectie impotriva celor cu intentii rele, care nu folosesc aplicatia, ci interactioneaza manual cu API-ul acesteia.
+
+Daca oricare dintre cele 2 validari gasesc erori, acestea vor fi afisate utilizatorului exact la campurile corespunzatoare.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.45\columnwidth]{exemplu-eroare-validare-frontend}
+\includegraphics*[width=0.45\columnwidth]{exemplu-eroare-validare-backend}
+\caption{Exemplu Eroare Validare - Frontend(stanga), Backend(dreapta)}
+\label{exemplu-eroare-validare}
+\end{figure}
+
+\section{Functionalitati administrator}
+
+\subsection{Structura Universitatii}
+\subsection{Managementul utilizatorilor}
+
+\section{Functionalitati profesor}
+\subsection{Crearea activitatilor}
+\subsection{Notarea studentilor}
+\subsection{Crearea setului personal de intrebari}
+
+\section{Functionalitati student}
+\subsection{Accesarea detaliilor fiecarei activitati}
+\subsection{Incarcarea rezolvarilor pentru teme}
+\subsection{Participarea la teste}
+
+\section{Functionalitati comune}
+\subsection{Participarea la discutii pe forum}
+
+\section{Securitate}
 
 % sterge asta dupa ce folosesti o data cite
 Sterge de aici\cite{typescriptlangorgintro}
