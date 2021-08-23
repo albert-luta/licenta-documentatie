@@ -556,7 +556,7 @@ Odata selectata o universitate, utilizatorul va fi redirectionat spre tabloul de
 \label{tablou-de-bord-universitate-meniu-utilizator-administrator}
 \end{figure}
 
-Ca si continut va fi afisata lista de facultati din cadrul universitatii ca si sectiune colapsabila, in care va fi afisata lista de materii din cadrul respectivei facultati. Daca utilizatorul detine rolul de administrator in cadrul universitatii, vor aparea butoane de adaugare, editare sau stergere a facultatilor si materiilor.
+Ca si continut, va fi afisata lista de facultati din cadrul universitatii ca si sectiune colapsabila, in care va fi afisata lista de materii din cadrul respectivei facultati. Daca utilizatorul detine rolul de administrator in cadrul universitatii, vor aparea butoane de adaugare, editare sau stergere a facultatilor si materiilor.
 
 \begin{figure}[H]
 \centering
@@ -602,7 +602,103 @@ Ca si continut va fi afisata lista de facultati din cadrul universitatii ca si s
 % TODO: completeaza dupa ce implementezi in aplicatie
 
 \section{Functionalitati profesor}
+
+Odata selectata o materie, utilizatorul va fi redirectionat spre tabloul de bord al materiei. Aici bara de instrumente isi pastreaza aceleasi functionalitati, iar continutul va fi reprezentat de o lista de sectiuni, fiecare sectiune fiind colapsabila si continand activitati. Profesorul va putea crea atat sectiuni, pentru o mai buna repartizare logica a activitatilor, cat si activitati. Crearea, editarea si stergerea sectiunilor au exact acelasi format ca cel al facultatilor.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-materie-lista-sectiuni-profesor}
+\caption{Tablou de bord Materie - Lista sectiuni Profesor}
+\label{tablou-de-bord-materie-lista-sectiuni-profesor}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.45\columnwidth]{tablou-de-bord-materie-formular-creare-sectiune}
+\includegraphics*[width=0.45\columnwidth]{tablou-de-bord-materie-formular-editare-sectiune}
+\caption{Tablou de bord Materie - Formular creare(stanga), editare(dreapta) Sectiune}
+\label{tablou-de-bord-materie-formular-sectiune}
+\end{figure}
+
 \subsection{Crearea activitatilor}
+
+Pentru crearea si editarea activitatilor, formularul se va schimba in functie de tipul de activitate dorit.
+
+Pentru tipurile materiale(resource) si forum, acestea nu vor contine nimic in plus fata de formularul de baza al unei activitati. Orice activitate are urmatoarele campuri de completat:
+\begin{itemize}
+	\item Nume(Name) - numele activitatii
+	\item Descriere(Description)(optional) - descriere sau textul activitatii
+	\item Fisiere(Files)(optional) - fisiere ajutatoare pentru parcurgerea activitatii de catre student
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.2\columnwidth]{tablou-de-bord-materie-meniu-alegere-tip-de-activitate}
+\caption{Tablou de bord Materie - Meniu alegere tip de Activitate}
+\label{tablou-de-bord-materie-meniu-alegere-tip-de-activitate}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.45\columnwidth]{tablou-de-bord-materie-formular-creare-material}
+\includegraphics*[width=0.45\columnwidth]{tablou-de-bord-materie-formular-editare-material}
+\caption{Tablou de bord Materie - Formular creare(stanga), editare(dreapta) Material/Forum}
+\label{tablou-de-bord-materie-formular-material}
+\end{figure}
+
+Pentru tipul tema(assignment), se vor mai adauga 2 campuri:
+\begin{itemize}
+	\item Nota maxima(Max Grade) - nota maxima pe care o poate obtine un student pentru realizarea temei
+	\item Termen limita(Deadline) - data si ora pana cand tema poate fi incarcata
+\end{itemize}
+Nota maxima trebuie sa fie mai mare sau egal cu 0, iar termenul limita trebuie sa reprezinte o data mai mare decat data curenta.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.8\columnwidth]{tablou-de-bord-materie-campuri-tema}
+\caption{Tablou de bord Materie - Campuri in plus pentru tipul Tema}
+\label{tablou-de-bord-materie-campuri-tema}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.32\columnwidth]{tablou-de-bord-materie-camp-alegere-data}
+\includegraphics*[width=0.32\columnwidth]{tablou-de-bord-materie-camp-alegere-ora}
+\includegraphics*[width=0.32\columnwidth]{tablou-de-bord-materie-camp-alegere-minut}
+\caption{Tablou de bord Materie - Camp alegere Timp - data(1), ora(2), minut(3)}
+\label{tablou-de-bord-materie-camp-alegere-timp}
+\end{figure}
+
+Pentru tipul test(quiz), se vor mai adauga 6 campuri:
+\begin{itemize}
+	\item Timp deschidere(Time Open) - timp de deschidere al testului
+	\item Timp inchidere(Time Close) - timp de inchidere al testului
+	\item Timp limita(minute)(Time Limit) - timpul limita maxim admis
+	\item Amestecare intrebari(Shuffle Questions) - amesteca aleator ordinea intrebarilor
+	\item Amestecare raspunsuri(Shuffle Answers) - amesteca aleator ordinea raspunsurilor fiecarei intrebari
+	\item Intrebari(Questions) - setul de intrebari pentru generarea testelor studentilor, iar pentru fiecare intrebare, vom avea 2 campuri
+		\begin{itemize}
+			\item Ordinea - ordinea in lista de intrebari
+			\item Nota maxima - nota maxima pe care o poate obtine un student pentru rapunsul corect la intrebare
+		\end{itemize}
+\end{itemize}
+Timpul de deschidere si cel de inchidere trebuie sa reprezinte o data mai mare decat data curenta, timpul de inchidere trebuie sa fie dupa timpul de deschidere, timpul limita trebuie sa fie mai mare decat 0, iar pentru fiecare intrebare in parte, nota maxima trebuie sa fie mai mare sau egala cu 0.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.7\columnwidth]{tablou-de-bord-materie-campuri-test}
+\caption{Tablou de bord Materie - Campuri in plus pentru tipul Test}
+\label{tablou-de-bord-materie-campuri-test}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-materie-formular-adaugare-intrebari}
+\caption{Tablou de bord Materie - Formular adaugare intrebari}
+\label{tablou-de-bord-materie-formular-adaugare-intrebari}
+\end{figure}
+
+
 \subsection{Notarea studentilor}
 \subsection{Crearea setului personal de intrebari}
 
@@ -616,7 +712,7 @@ Ca si continut va fi afisata lista de facultati din cadrul universitatii ca si s
 
 \section{Securitate}
 
-% sterge asta dupa ce folosesti o data cite
+% TODO: sterge asta dupa ce folosesti o data cite
 Sterge de aici\cite{typescriptlangorgintro}
 
 % \chapter{Tehnologii folosite}
