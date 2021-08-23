@@ -517,7 +517,89 @@ Butonul editare(edit) va deschide un formular de editare al universitatii, cel d
 \end{figure}
 
 \subsection{Structura Universitatii}
+
+Odata selectata o universitate, utilizatorul va fi redirectionat spre tabloul de bord al universitatii. Aici vor fi introduse noi functionalitati in bara de instrumente, in partea de stanga vor aparea un buton cu detaliile universitatii, care va redirectiona spre tabloul de bord al universitatii, si o iconita de meniu care poate fi comutata, pentru a tine meniul de navigare rapida deschis sau a-l inchide. Tot aici, meniul utilizatorului va avea introduse butoane noi in functie de rolul pe care il detine in cadrul universitatii:
+\begin{itemize}
+	\item Student
+		\begin{itemize}
+			\item Note(Grades) - vizualizarea rapida a tuturor notelor grupate
+		\end{itemize}
+	\item Profesor/Administrator
+		\begin{itemize}
+			\item Set Personal de Intrebari(Question Bank)
+		\end{itemize}
+	\item Comun
+		\begin{itemize}
+			\item Activitati Viitoare(Upcoming activities) - Vizualizarea rapida a urmatoarelor activitati in ordine cronologica
+		\end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-universitate-bara-de-instrumente}
+\caption{Tablou de bord Universitate - Bara de Instrumente}
+\label{tablou-de-bord-universitate-bara-de-instrumente}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.4\columnwidth]{tablou-de-bord-universitate-meniu-navigare-rapida}
+\caption{Tablou de bord Universitate - Meniu navigare rapida}
+\label{tablou-de-bord-universitate-meniu-navigare-rapida}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.4\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-administrator}
+\includegraphics*[width=0.4\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-student}
+\caption{Tablou de bord Universitate - Meniu Utilizator administrator/profesor(stanga), student(dreapta)}
+\label{tablou-de-bord-universitate-meniu-utilizator-administrator}
+\end{figure}
+
+Ca si continut va fi afisata lista de facultati din cadrul universitatii ca si sectiune colapsabila, in care va fi afisata lista de materii din cadrul respectivei facultati. Daca utilizatorul detine rolul de administrator in cadrul universitatii, vor aparea butoane de adaugare, editare sau stergere a facultatilor si materiilor.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-universitate-lista-facultati-administrator}
+\caption{Tablou de bord Universitate - Lista facultati Administrator}
+\label{tablou-de-bord-universitate-lista-facultati-administrator}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-universitate-lista-facultati-student}
+\caption{Tablou de bord Universitate - Lista facultati Student}
+\label{tablou-de-bord-universitate-lista-facultati-student}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.45\columnwidth]{tablou-de-bord-universitate-formular-creare-facultate}
+\includegraphics*[width=0.45\columnwidth]{tablou-de-bord-universitate-formular-editare-facultate}
+\caption{Tablou de bord Universitate - Formular creare(stanga), editare(dreapta) Facultate}
+\label{tablou-de-bord-universitate-formular-facultate}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.45\columnwidth]{tablou-de-bord-universitate-formular-creare-materie}
+\includegraphics*[width=0.45\columnwidth]{tablou-de-bord-universitate-formular-editare-materie}
+\caption{Tablou de bord Universitate - Formular creare(stanga), editare(dreapta) Materie}
+\label{tablou-de-bord-universitate-formular-materie}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.15\columnwidth]{tablou-de-bord-universitate-meniu-facultate}
+\caption{Tablou de bord Universitate - Meniu Facultate/Materie}
+\label{tablou-de-bord-universitate-meniu-facultate}
+\end{figure}
+
+
 \subsection{Managementul utilizatorilor}
+
+% TODO: completeaza dupa ce implementezi in aplicatie
 
 \section{Functionalitati profesor}
 \subsection{Crearea activitatilor}
