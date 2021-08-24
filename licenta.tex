@@ -84,6 +84,7 @@
 \listoffigures
 \listoftables
 \abbreviations{
+	% TODO: adauga traducere pentru tot ce este in engleza
 	SPA = Single Page Aplication
 
 	CSR = Client Side Rendering
@@ -369,7 +370,7 @@ Fiind o aplicatie web, am folosit arhitectura standard de construire a acestora 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=0.7\columnwidth]{arhitectura-client-server}
-\caption{Arhitectura Client-Server}
+\caption{Arhitectura Client-Server\cite{clientserverarchitecture}}
 \label{arhitectura-client-server}
 \end{figure}
 
@@ -597,8 +598,7 @@ Ca si continut, va fi afisata lista de facultati din cadrul universitatii ca si 
 \end{figure}
 
 
-\subsection{Managementul utilizatorilor}
-
+% \subsection{Managementul utilizatorilor}
 % TODO: completeaza dupa ce implementezi in aplicatie
 
 \section{Functionalitati profesor}
@@ -830,19 +830,89 @@ Pentru o calculare automata corecta a notelor de la teste, exista cateva indicat
 \end{figure}
 
 \section{Functionalitati student}
-\subsection{Accesarea detaliilor fiecarei activitati}
-\subsection{Incarcarea rezolvarilor pentru teme}
-\subsection{Participarea la teste}
+
+Ajungand in tabloul de bord al materiei, utilizatorii cu rol de student vor vedea aceleasi informatii ca si cei cu rol de profesor, in afara de butoanele de creare, editare sau stergere ale sectiunilor si activitatilor.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.7\columnwidth]{tablou-de-bord-materie-lista-sectiuni-student}
+\caption{Tablou de bord Materie - Lista Sectiuni Student}
+\label{tablou-de-bord-materie-lista-sectiuni-student}
+\end{figure}
+
+\subsection{Participarea la activitati}
+
+Odata selectata o activitate, utilizatorul va fi redirectionat catre tabloul de bord al activitatii, care va afisa ca si in cazul utilizatorilor cu rol de profesor, detalii de baza despre activitate, dar si detalii specifice studentului. Diferentele notabile sunt pentru tipurile tema si test.
+
+In cazul temelor, studentului i se vor afisa detalii personale legate de tema respectiva, nota, ultima data de incarcare, si daca timpul limita nu s-a scurs, o modalitate de incarcare a temei.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-activitate-incarcare-tema}
+\caption{Tablou de bord Activitate - Incarcare tema}
+\label{tablou-de-bord-activitate-incarcare-tema}
+\end{figure}
+
+In cazul testelor, ca si in cazul temelor, studentului i se vor afisa detalii personale legate de testul respectiv, nota, timp deschidere test, timp trimitere test pentru corectare.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-activitate-detalii-test-student}
+\caption{Tablou de bord Activitate - Detalii test Student}
+\label{tablou-de-bord-activitate-detalii-test-student}
+\end{figure}
+
+In functie de timpul curent si detaliile testului, utilizatorului i se va afisa una dintre cele 5 stari ale butonului de interactionare:
+\begin{itemize}
+	\item Nimic - testul nu este activ inca sau testul a expirat, utilizatorul nu si-a inceput incercarea
+	\item Incepe - testul este activ, utilizatorul nu si-a inceput incercarea
+	\item Continua - testul este activ, utilizatorul si-a inceput incercarea
+	\item Verifica(blocat) - testul este activ, utilizatorul a trimis rezolvarea pentru notare
+	\item Verifica - testul a expirat, utilizatorul si-a inceput incercarea
+\end{itemize}
+
+Butoanele Incepe si Continua vor redirectiona studentul spre incercarea curenta a testului. Starea testului, raspunsurile la intrebari, sunt salvate incremental, in timp ce studentul rezolva testul, in cazul unei urgente sau deconectari, studentul nu va pierde tot progresul pe care l-a facut.
+
+Tabloul de bord al testului activ este format din meniul pentru navigare rapida in dreapta paginii, iar ca si continut se vor afisa intrebarile, una cate una, detalii despre aceasta, si timpul ramas din incercare. Toate celelalte butoane si meniuri din bara de instrumente vor fi ascunse, pentru cat mai putine distrageri si/sau apasari din greseala.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-test-activ}
+\caption{Tablou de bord Test activ}
+\label{tablou-de-bord-test-activ}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.7\columnwidth]{tablou-de-bord-test-activ-intrebare-raspuns-unic}
+\caption{Tablou de bord Test activ - Intrebare raspuns unic}
+\label{tablou-de-bord-test-activ-intrebare-raspuns-unic}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.7\columnwidth]{tablou-de-bord-test-activ-intrebare-raspuns-multiplu}
+\caption{Tablou de bord Test activ - Intrebare raspuns multiplu}
+\label{tablou-de-bord-test-activ-intrebare-raspuns-multiplu}
+\end{figure}
+
+Dupa ce testul a expirat, utilizatorul isi poate verifica raspunsurile la intrebari si notele.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-verificare-test}
+\caption{Tablou de bord Verificare Test}
+\label{tablou-de-bord-verificare-test}
+\end{figure}
 
 
-\section{Baza de date}
+% \section{Baza de date}
+% TODO: do this when you have time - logical separation
 
-\section{Securitate}
+% \section{Securitate}
 % TODO: do this when you have time - jwt, roles, scopes
 
 
-% TODO: sterge asta dupa ce folosesti o data cite
-Sterge de aici\cite{typescriptlangorgintro}
 
 % \chapter{Tehnologii folosite}
 
