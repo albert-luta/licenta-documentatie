@@ -33,6 +33,7 @@
 \ProcessOptions
 \LoadClass[\@pointsize]{report}
 \usepackage{array}
+\usepackage{pdfpages}
 \usepackage{setspace}
 \doublespacing
 
@@ -484,41 +485,7 @@ Catedra \@catedra} \par\nobreak % DN
 \newcommand\declaratiep{%
 \null\vfil
 
-{\centering\bfseries\large Declaraţie de onestitate academică}\\
-\vspace{15mm}
-
-    Prin prezenta declar că lucrarea cu titlul {\it {\@title}},
-    prezentată în cadrul Facultăţii de Electronică, Telecomunicaţii şi
-    Tehnologia Informaţiei a Universităţii “Politehnica” din Bucureşti
-    ca cerinţă parţială pentru obţinerea titlului de {\it{\@titlulobtinut}}
-    în domeniul Inginerie Electronică şi Telecomunicaţii/ Calculatoare
-    şi Tehnologia Informaţiei, programul de studii {\it{\@program}}
-    este scrisă de mine şi nu a mai fost prezentată niciodată la o
-    facultate sau instituţie de învăţământ superior din ţară sau
-    străinătate.  Declar că toate sursele utilizate, inclusiv cele de
-    pe Internet, sunt indicate în lucrare, ca referinţe
-    bibliografice. Fragmentele de text din alte surse, reproduse
-    exact, chiar şi în traducere proprie din altă limbă, sunt scrise
-    între ghilimele şi fac referinţă la sursă. Reformularea în cuvinte
-    proprii a textelor scrise de către alţi autori face referinţă la
-    sursă. Înţeleg că plagiatul constituie infracţiune şi se
-    sancţionează conform legilor în vigoare.  Declar că toate
-    rezultatele simulărilor, experimentelor şi măsurătorilor pe care
-    le prezint ca fiind făcute de mine, precum şi metodele prin care
-    au fost obţinute, sunt reale şi provin din respectivele simulări,
-    experimente şi măsurători. Înţeleg că falsificarea datelor şi
-    rezultatelor constituie fraudă şi se sancţionează conform
-    regulamentelor în vigoare.
-
-\vfil 
-Bucureşti,  {\@month} {\@year}. 
-
-Absolvent: {\@author}
-\\
-\\
-
-...........................
-
+\includepdf{documente/Luta_Albert-Lucian_Declaratie-Onestitate.pdf}
 %{\@declaratie}\\
 \vfil\newpage}
 
@@ -536,6 +503,9 @@ Absolvent: {\@author}
         \titlep
         % \inscrierep
         \declaratiep
+		\null
+		\includepdf{documente/Luta_Albert-Lucian_Anexa-1.pdf}
+		\null
         \tableofcontents
         %\ifcopyright\copyrightp\fi  
         \c@page2 % set page counter so that next is 2
