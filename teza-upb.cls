@@ -392,7 +392,7 @@
 
 \newcommand\titlep{\vbox to \textheight{%
     \vskip 12mm
-    \centering\large{Universitatea POLITEHNICA din București\\
+    \centering\large{Universitatea ``Politehnica'' din București\\
 \@facultatea} \par\nobreak % DN
     \vskip 40mm
         \parskip0pt 
@@ -414,7 +414,7 @@
             Prezentată ca cerință parțială pentru obținerea\\ 
             titlului de {\it {\@titlulobtinut}}\\ 
             în domeniul {\it\@domeniu}\\
-            programul de studii {\it\@program}
+            programul de studii de licenta {\it\@program}
 
         \vfil
 
