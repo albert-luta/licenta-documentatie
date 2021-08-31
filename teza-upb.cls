@@ -502,9 +502,10 @@ Catedra \@catedra} \par\nobreak % DN
         \pagestyle{empty}
         \titlep
         % \inscrierep
-        \declaratiep
 		\null
 		\includepdf{documente/Luta_Albert-Lucian_Anexa-1.pdf}
+		\null
+        \declaratiep
 		\null
         \tableofcontents
         %\ifcopyright\copyrightp\fi  
