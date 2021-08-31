@@ -537,9 +537,13 @@ Odata selectata o universitate, utilizatorul va fi redirectionat spre tabloul de
 		\begin{itemize}
 			\item Note(Grades) - vizualizarea rapida a tuturor notelor grupate
 		\end{itemize}
-	\item Profesor/Administrator
+	\item Profesor
 		\begin{itemize}
 			\item Set Personal de Intrebari(Question Bank)
+		\end{itemize}
+	\item Administrator
+		\begin{itemize}
+			\item Utilizatori - managementul utilizatorilor
 		\end{itemize}
 	\item Comun
 		\begin{itemize}
@@ -563,9 +567,10 @@ Odata selectata o universitate, utilizatorul va fi redirectionat spre tabloul de
 
 \begin{figure}[H]
 \centering
-\includegraphics*[width=0.4\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-administrator}
-\includegraphics*[width=0.4\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-student}
-\caption{Tablou de bord Universitate - Meniu Utilizator administrator/profesor(stanga), student(dreapta)}
+\includegraphics*[width=0.32\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-administrator}
+\includegraphics*[width=0.32\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-profesor}
+\includegraphics*[width=0.32\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-student}
+\caption{Tablou de bord Universitate - Meniu Utilizator administrator(stanga), profesor(mijloc), student(dreapta)}
 \label{tablou-de-bord-universitate-meniu-utilizator-administrator}
 \end{figure}
 
@@ -609,9 +614,51 @@ Ca si continut, va fi afisata lista de facultati din cadrul universitatii ca si 
 \label{tablou-de-bord-universitate-meniu-facultate}
 \end{figure}
 
+\subsection{Managementul utilizatorilor}
 
-% \subsection{Managementul utilizatorilor}
-% TODO: completeaza dupa ce implementezi in aplicatie
+Odata apasat butonul 'Utilizatori' din meniul de utilizator dedicat administratorilor, vom fi redirectionati catre tabloul de bord al tuturor utilizatorilor din cadrul universitatii. Aici se vor putea adauga noi utilizatori, sau modifica sau sterge utilizatorii deja existenti. Fiecare utilizator va avea un rol si va fi inrolat la anumite facultati si materii. Un caz mai special il reprezinta utilizatorii cu rol de administratori, care nu vor fi inrolati la anumite facultati, aplicatia ii va inrola automat la toate facultatile si materiile si ii va tine in aceasta stare de fiecare data cand acestea sa vor schimba. Totodata, administratorii nu vor avea posibilitatea stergerii sau schimbarii rolului altor administratori.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=\columnwidth]{tablou-de-bord-management-utilizatori}
+\caption{Tablou de bord Management Utilizatori}
+\label{tablou-de-bord-management-utilizatori}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.7\columnwidth]{tablou-de-bord-management-utilizatori-formular-adaugare-utilizator}
+\caption{Tablou de bord Management Utilizatori - Formular Adaugare Utilizator}
+\label{tablou-de-bord-management-utilizatori-formular-adaugare-utilizator}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.65\columnwidth]{tablou-de-bord-management-utilizatori-formular-editare-utilizator}
+\caption{Tablou de bord Management Utilizatori - Formular Editare Utilizator}
+\label{tablou-de-bord-management-utilizatori-formular-editare-utilizator}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.3\columnwidth]{tablou-de-bord-management-utilizatori-alegere-rol-utilizator}
+\caption{Tablou de bord Management Utilizatori - Alegere Rol Utilizator}
+\label{tablou-de-bord-management-utilizatori-alegere-rol-utilizator}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.75\columnwidth]{tablou-de-bord-management-utilizatori-formular-inrolare-la-facultati}
+\caption{Tablou de bord Management Utilizatori - Formular Inrolare la Facultati}
+\label{tablou-de-bord-management-utilizatori-formular-inrolare-la-facultati}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=0.6\columnwidth]{tablou-de-bord-management-utilizatori-formular-inrolare-la-materii}
+\caption{Tablou de bord Management Utilizatori - Formular Inrolare la Materii}
+\label{tablou-de-bord-management-utilizatori-formular-inrolare-la-materii}
+\end{figure}
 
 \section{Functionalitati profesor}
 
