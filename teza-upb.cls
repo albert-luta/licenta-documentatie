@@ -498,8 +498,8 @@ Catedra \@catedra} \par\nobreak % DN
 \let\enddescriptionlist=\endlist
 
 \newcommand\beforepreface{%
-        \pagenumbering{roman}
-        \pagestyle{empty}
+        \pagenumbering{arabic}
+		\pagestyle{empty}
         \titlep
         % \inscrierep
 		\null
@@ -509,8 +509,6 @@ Catedra \@catedra} \par\nobreak % DN
 		\null
         \tableofcontents
         %\ifcopyright\copyrightp\fi  
-        \c@page2 % set page counter so that next is 2
-        \pagestyle{plain}
         \ifabstract{%
                 \typeout{Abstract}
                 \addcontentsline{toc}{unnumberedsection}{Abstract}
@@ -580,9 +578,7 @@ Catedra \@catedra} \par\nobreak % DN
         \fi
         \newpage
         \afterprefacetrue
-        \c@page0 % set page counter so that next is 1
-        \pagenumbering{arabic}
-        \pagestyle{topright}
+		\pagestyle{plain}
         }
 \newenvironment{vita}%
 {\unnumberedsection{Vita}
