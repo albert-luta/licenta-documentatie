@@ -141,7 +141,7 @@ Aplicația permite crearea și managementul unei universități. În cadrul univ
 
 Înainte de a trece la implementarea propriu-zisă a proiectului, trebuie să înțelegem foarte bine cerințele și metodele prin care acesta va fi construit. Această treapta preliminară implementării se numește proiectare, și a devenit din ce în ce mai importantă cu cât programele software au devenit mai complexe.
 
-Proiectarea software reprezintă procesul de găsire a soluțiilor conceptuale pentru realizarea unei aplicații, pe baza unui set de cerințe și așteptări. Acest pas poate reduce costurile și timpul de implementare, în cazul unor neînțelegeri inițiale sau a unor schimbări de cerințe, și ușurează procesul de estimare al timpului și costului de realizare al întregului proiect.
+Proiectarea software reprezintă procesul de găsire a soluțiilor conceptuale pentru realizarea unei aplicații, pe baza unui set de cerințe și așteptări. Acest pas poate reduce costurile și timpul de implementare, în cazul unor neînțelegeri inițiale sau a unor schimbări de cerințe, și ușurează procesul de estimare al timpului și costului de realizare al întregului proiect.\cite{proiectaresoftware}
 
 \begin{figure}[H]
 \centering
@@ -361,7 +361,7 @@ Indiferent de rolul pe care un utilizator îl are în universitate, acesta va pu
 
 \chapter{Implementare}
 
-Fiind o aplicaţie web, am folosit arhitectura standard de construire a acestora "client-server". Aceasta împarte aplicaţia în două părţi, fiecare având un rol separat, comunicând între ele prin conexiuni TCP. Partea de client se referă la interfaţa vizuală cu care interacţionează un utilizator în momentul folosirii, iar partea de server se referă la codul care rulează pe un calculator, de obicei în cloud\footnote{Ansamblu distribuit de servicii de calcul}, care răspunde cererilor primite de la client, cel din urma stocând datele necesare rulării aplicaţiei, de cele mai multe ori într-o bază de date.
+Fiind o aplicaţie web, am folosit arhitectura standard de construire a acestora "client-server". Aceasta împarte aplicaţia în două părţi, fiecare având un rol separat, comunicând între ele prin conexiuni TCP. Partea de client se referă la interfaţa vizuală cu care interacţionează un utilizator în momentul folosirii, iar partea de server se referă la codul care rulează pe un calculator, de obicei în cloud\footnote{Ansamblu distribuit de servicii de calcul}, care răspunde cererilor primite de la client, cel din urma stocând datele necesare rulării aplicaţiei, de cele mai multe ori într-o bază de date.\cite{arhitecturaclientserver}
 
 \begin{figure}[H]
 \centering
@@ -370,25 +370,25 @@ Fiind o aplicaţie web, am folosit arhitectura standard de construire a acestora
 \label{arhitectura-client-server}
 \end{figure}
 
-Întreaga aplicaţie este construită folosind limbajul TypeScript, atât pe partea de client, cât şi pe partea de server, acesta fiind un superset\footnote{Un limbaj de programare care conține toate caracteristicile unui limbaj dat și a fost extins sau îmbunătățit pentru a include și alte caracteristici} al limbajului JavaScript, care ne oferă un sistem sigur pentru tipuri de date.
+Întreaga aplicaţie este construită folosind limbajul TypeScript, atât pe partea de client, cât şi pe partea de server, acesta fiind un superset\footnote{Un limbaj de programare care conține toate caracteristicile unui limbaj dat și a fost extins sau îmbunătățit pentru a include și alte caracteristici} al limbajului JavaScript, care ne oferă un sistem sigur pentru tipuri de date.\cite{documentatietypescript}
 
 Tehnologiile pe care le-am folosit pe partea de client sunt:
 \begin{itemize}
-	\item React - Librărie de JavaScript pentru construirea interfețelor vizuale complexe
-	\item Next - Framework\footnote{Un produs software care oferă funcţionalităţi generice pentru construirea mai facilă a aplicaţiilor} de React, care ne oferă o mulţime de unelte de optimizare
-	\item Material-UI - Librărie de componente UI de React, bazată pe design-ul celor de la Google(Material Design)
-	\item Apollo Client - Librărie de React, care ne ajută la folosirea unui API de tip GraphQL
+	\item React\cite{documentatiereact} - Librărie de JavaScript pentru construirea interfețelor vizuale complexe
+	\item Next\cite{documentatienext} - Framework\footnote{Un produs software care oferă funcţionalităţi generice pentru construirea mai facilă a aplicaţiilor} de React, care ne oferă o mulţime de unelte de optimizare
+	\item Material-UI\cite{documentatiematerialui} - Librărie de componente UI de React, bazată pe design-ul celor de la Google(Material Design)
+	\item Apollo Client\cite{documentatieapolloclient} - Librărie de React, care ne ajută la folosirea unui API de tip GraphQL
 \end{itemize}
 
 Tehnologiile pe care le-am folosit pe partea de server sunt:
 \begin{itemize}
-	\item Node - Mediu de execuţie pentru JavaScript, care ne va ajuta la construirea unui server
-	\item Nest - Framework de JavaScript, care ne va ajuta la construirea unui API de tip GraphQL
-	\item PostgreSQL - SGBD open-source\footnote{Proiect software ``public'' -- oricine are acces pentru a citi, adăuga sau modifica codul sursă, moderat de obicei de un grup restrâns}
-	\item Prisma - ORM de JavaScript, care ne va ajuta în gestionarea bazei de date
+	\item Node\cite{documentatienode} - Mediu de execuţie pentru JavaScript, care ne va ajuta la construirea unui server
+	\item Nest\cite{documentatienest} - Framework de JavaScript, care ne va ajuta la construirea unui API de tip GraphQL
+	\item PostgreSQL\cite{documentatiepostgresql} - SGBD open-source\footnote{Proiect software ``public'' -- oricine are acces pentru a citi, adăuga sau modifica codul sursă, moderat de obicei de un grup restrâns}
+	\item Prisma\cite{documentatieprisma} - ORM de JavaScript, care ne va ajuta în gestionarea bazei de date
 \end{itemize}
 
-În ultimii ani, datorită creşterii utilizării internetului pe dispozitivele mobile, dezvoltatorii de aplicaţii web au fost nevoiţi să adopte o abordare şi un design flexibil\footnote{Website-ul poate fi folosit atât de pe ecrane mari(ex. desktop), cât şi de pe ecrane mici(ex. telefonul mobil)} când vine vorba de interfaţă. Din acest considerent, aplicaţia va fi gândită şi dezvoltata să poată fi folosită pe orice dimensiune a ecranului, dar în continuare vom prezenta funcţionalităţile folosind un ecran mare, deoarece acesta va fi folosit cel mai des de către utilizatori.
+În ultimii ani, datorită creşterii utilizării internetului pe dispozitivele mobile, dezvoltatorii de aplicaţii web au fost nevoiţi să adopte o abordare şi un design flexibil\footnote{Website-ul poate fi folosit atât de pe ecrane mari(ex. desktop), cât şi de pe ecrane mici(ex. telefonul mobil)} când vine vorba de interfaţă. Din acest considerent, aplicaţia va fi gândită şi dezvoltata să poată fi folosită pe orice dimensiune a ecranului, dar în continuare vom prezenta funcţionalităţile folosind un ecran mare, deoarece acesta va fi folosit cel mai des de către utilizatori.\cite{designflexibil}
 
 \begin{figure}[H]
 \centering
@@ -436,7 +436,7 @@ Pentru ca un utilizator să se poate înregistra, acesta va trebui să completez
 
 Odată înregistrat, acesta se va putea autentifica folosindu-şi email-ul şi parola.\\
 
-Aceste date, împreuna cu orice alt formular din aplicaţie, vor fi validate de 2 ori, 1 dată pe partea de client şi 1 dată pe partea de server. Validarea pe partea de client o vom face din motive de UX, utilizatorul va şti dacă datele au un format valid şi respecta anumite reguli de validare imediat după ce termină un anumit câmp de completat. Validarea pe partea de server o vom face din 2 motive, în primul rând pe partea de client nu se pot face validările care ţin cont de date din baza de date, spre exemplu nu putem verifica dacă email-ul introdus este unic, iar în al doilea rând, reprezintă o metodă de protecţie împotriva celor cu intenţii rele, care nu folosesc aplicaţia, ci interacţionează manual cu API-ul acesteia.
+Aceste date, împreuna cu orice alt formular din aplicaţie, vor fi validate de 2 ori, 1 dată pe partea de client şi 1 dată pe partea de server. Validarea pe partea de client o vom face din motive de UX, utilizatorul va şti dacă datele au un format valid şi respecta anumite reguli de validare imediat după ce termină un anumit câmp de completat. Validarea pe partea de server o vom face din 2 motive, în primul rând pe partea de client nu se pot face validările care ţin cont de date din baza de date, spre exemplu nu putem verifica dacă email-ul introdus este unic, iar în al doilea rând, reprezintă o metodă de protecţie împotriva celor cu intenţii rele, care nu folosesc aplicaţia, ci interacţionează manual cu API-ul acesteia.\cite{formularbunepractici}
 
 Dacă oricare dintre cele 2 validări găsesc erori, acestea vor fi afişate utilizatorului exact la câmpurile corespunzătoare.
 
