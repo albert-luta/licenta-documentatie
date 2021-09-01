@@ -11,7 +11,8 @@
   bookmarks,
   bookmarksopen=true,
   pdftitle={licenta},
-  linktocpage]{hyperref}
+  linktocpage,
+  unicode]{hyperref}
 
 
 \singlespacing
@@ -165,7 +166,7 @@ Functionalităţile utilizatorilor cu rol de administrator sunt următoarele:
 \begin{figure}[H]
 \centering
 \includegraphics*[width=0.5\columnwidth]{diagrama-use-case-creeaza-structura-universitatii}
-\caption{Diagrama Use-Case - Creează Structura Universității}
+\caption{Diagrama Caz de utilizare - Creează Structura Universității}
 \label{diagrama-use-case-creeaza-structura-universitatii}
 \end{figure}
 
@@ -184,7 +185,7 @@ Odată stabilita structura universității, administratorul va putea adăuga uti
 \begin{figure}[H]
 \centering
 \includegraphics*[width=0.525\columnwidth]{diagrama-use-case-adauga-utilizator}
-\caption{Diagrama Use-Case - Adaugă Utilizator}
+\caption{Diagrama Caz de utilizare - Adaugă Utilizator}
 \label{diagrama-use-case-adauga-utilizator}
 \end{figure}
 
@@ -215,7 +216,7 @@ Activitățile pot fi de 4 tipuri: materiale, tema, test și forum. Pentru crear
 \begin{figure}[H]
 \centering
 \includegraphics*[width=0.9\columnwidth]{diagrama-use-case-creeaza-activitate}
-\caption{Diagrama Use-Case - Creează Activitate}
+\caption{Diagrama Caz de utilizare - Creează Activitate}
 \label{diagrama-use-case-creeaza-activitate}
 \end{figure}
 
@@ -234,7 +235,7 @@ Pentru notare, profesorul este nevoit în primul rand sa selecteze activitatea p
 \begin{figure}[H]
 \centering
 \includegraphics*[width=0.65\columnwidth]{diagrama-use-case-noteaza-student}
-\caption{Diagrama Use-Case - Notează Student}
+\caption{Diagrama Caz de utilizare - Notează Student}
 \label{diagrama-use-case-noteaza-student}
 \end{figure}
 
@@ -253,7 +254,7 @@ Pentru a face mai facila refolosirea întrebărilor de la un an la altul, profes
 \begin{figure}[H]
 \centering
 \includegraphics*[width=0.3\columnwidth]{diagrama-use-case-creeaza-set-personal-de-intrebari}
-\caption{Diagrama Use-Case - Creează Set Personal de Întrebări}
+\caption{Diagrama Caz de utilizare - Creează Set Personal de Întrebări}
 \label{diagrama-use-case-creeaza-set-personal-de-intrebari}
 \end{figure}
 
@@ -282,7 +283,7 @@ După ce profesorul a creat structura materiei, secțiuni și activități, stud
 \begin{figure}[H]
 \centering
 \includegraphics*[width=\columnwidth]{diagrama-use-case-acceseaza-activitate}
-\caption{Diagrama Use-Case - Accesează Activitate}
+\caption{Diagrama Caz de utilizare - Accesează Activitate}
 \label{diagrama-use-case-acceseaza-activitate}
 \end{figure}
 
@@ -301,7 +302,7 @@ Pentru activitățile de tip tema, aceștia își vor putea încărca rezolvări
 \begin{figure}[H]
 \centering
 \includegraphics*[width=0.5\columnwidth]{diagrama-use-case-incarca-rezolvare-tema}
-\caption{Diagrama Use-Case - Încarcă Rezolvare Tema}
+\caption{Diagrama Caz de utilizare - Încarcă Rezolvare Tema}
 \label{diagrama-use-case-incarca-rezolvare-tema}
 \end{figure}
 
@@ -321,7 +322,7 @@ Pentru activitățile de tip test, studenții vor putea interacționa în diferi
 \begin{figure}[H]
 \centering
 \includegraphics*[width=0.75\columnwidth]{diagrama-use-case-participa-la-test}
-\caption{Diagrama Use-Case - Participa la Test}
+\caption{Diagrama Caz de utilizare - Participa la Test}
 \label{diagrama-use-case-participa-la-test}
 \end{figure}
 
@@ -347,7 +348,7 @@ Indiferent de rolul pe care un utilizator îl are în universitate, acesta va pu
 \begin{figure}[H]
 \centering
 \includegraphics*[width=0.45\columnwidth]{diagrama-use-case-participa-la-forum}
-\caption{Diagrama Use-Case - Participa la Forum}
+\caption{Diagrama Caz de utilizare - Participa la Forum}
 \label{diagrama-use-case-participa-la-forum}
 \end{figure}
 
@@ -369,11 +370,9 @@ Fiind o aplicaţie web, am folosit arhitectura standard de construire a acestora
 \label{arhitectura-client-server}
 \end{figure}
 
-Fiind termeni deja standardizaţi în aceasta industrie, în continuare vom folosi frontend când discutam de partea de client şi backend când discutam de partea de server. \\
+Întreaga aplicatie este construita folosind limbajul TypeScript, atât pe partea de client, cat si pe partea de server, acesta fiind un superset\footnote{Un limbaj de programare care conține toate caracteristicile unui limbaj dat și a fost extins sau îmbunătățit pentru a include și alte caracteristici.} al limbajului JavaScript, care ne oferă un sistem sigur pentru tipuri de date.
 
-Întreaga aplicatie este construita folosind limbajul TypeScript, atât pe frontend, cat si pe backend, acesta fiind un superset\footnote{Un limbaj de programare care conține toate caracteristicile unui limbaj dat și a fost extins sau îmbunătățit pentru a include și alte caracteristici.} al limbajului JavaScript, care ne oferă un sistem sigur pentru tipuri de date.
-
-Tehnologiile pe care le-am folosit pentru frontend sunt:
+Tehnologiile pe care le-am folosit pe partea de client sunt:
 \begin{itemize}
 	\item React - Librărie de JavaScript pentru construirea interfețelor vizuale complexe
 	\item Next - Framework\footnote{Un produs software care oferă funcţionalităţi generice pentru construirea mai facila a aplicaţiilor} de React, care ne oferă o mulţime de unelte de optimizare
@@ -381,20 +380,20 @@ Tehnologiile pe care le-am folosit pentru frontend sunt:
 	\item Apollo Client - Librărie de React, care ne ajuta la folosirea unui API de tip GraphQL
 \end{itemize}
 
-Tehnologiile pe care le-am folosit pentru backend sunt:
+Tehnologiile pe care le-am folosit pe partea de server sunt:
 \begin{itemize}
-	\item Node - Mediu de execuţie pentru JavaScript, care ne va ajuta la construirea unui backend
+	\item Node - Mediu de execuţie pentru JavaScript, care ne va ajuta la construirea unui server
 	\item Nest - Framework de JavaScript, care ne va ajuta la construirea unui API de tip GraphQL
 	\item PostgreSQL - SGBD open-source\footnote{Proiect software ``public'' -- oricine are acces pentru a citi, adăuga sau modifica codul sursa, moderat de obicei de un grup restrâns}
 	\item Prisma - ORM de JavaScript, care ne va ajuta în gestionarea bazei de date
 \end{itemize}
 
-În ultimii ani, datorita creşterii utilizării internetului de pe dispozitivele mobile, dezvoltatorii de aplicaţii web au fost nevoiţi sa adopte o abordare si un design responsive\footnote{Website-ul poate fi folosit atât de pe ecrane mari(ex. desktop), cat si de pe ecrane mici(ex. telefonul)} când vine vorba de interfata. Din acest considerent, aplicatia va fi gândită si dezvoltata sa poată fi folosita pe orice dimensiune a ecranului, dar în continuare vom prezenta funcţionalităţile folosind un ecran mare, deoarece acesta va fi folosit cel mai des de către utilizatori.
+În ultimii ani, datorita creşterii utilizării internetului de pe dispozitivele mobile, dezvoltatorii de aplicaţii web au fost nevoiţi sa adopte o abordare si un design flexibil\footnote{Website-ul poate fi folosit atât de pe ecrane mari(ex. desktop), cat si de pe ecrane mici(ex. telefonul mobil)} când vine vorba de interfata. Din acest considerent, aplicatia va fi gândită si dezvoltata sa poată fi folosita pe orice dimensiune a ecranului, dar în continuare vom prezenta funcţionalităţile folosind un ecran mare, deoarece acesta va fi folosit cel mai des de către utilizatori.
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=\columnwidth]{exemplu-design-responsive-desktop}
-\caption{Exemplu design responsive - Desktop}
+\caption{Exemplu design flexibil - Desktop}
 \label{exemplu-design-responsive-desktop}
 \end{figure}
 
@@ -402,13 +401,13 @@ Tehnologiile pe care le-am folosit pentru backend sunt:
 \centering
 \includegraphics*[width=0.4\columnwidth]{exemplu-design-responsive-mobile-menu-closed}
 \includegraphics*[width=0.4\columnwidth]{exemplu-design-responsive-mobile-menu-opened}
-\caption{Exemplu design responsive - Mobile}
+\caption{Exemplu design flexibil - Telefon Mobil}
 \label{exemplu-design-responsive-mobile}
 \end{figure}
 
 \section{Modulul de Autentificare}
 
-Înainte ca utilizatorii sa poată interacţiona cu aplicatia, aceştia vor trebui să-şi creeze un cont, sau dacă au deja un cont sa se autentifice, cu ajutorul modulului de autentificare. Acesta este compus dintr-o pagina cu 2 funcţionalităţi Logare(Login) si Înregistrare(Register).
+Înainte ca utilizatorii sa poată interacţiona cu aplicatia, aceştia vor trebui să-şi creeze un cont, sau dacă au deja un cont sa se autentifice, cu ajutorul modulului de autentificare. Acesta este compus dintr-o pagina cu 2 funcţionalităţi Autentificare si Înregistrare.
 
 \begin{figure}[H]
 \centering
@@ -437,7 +436,7 @@ Pentru ca un utilizator sa se poate înregistra, acesta va trebui sa completeze 
 
 Odată înregistrat, acesta se va putea autentifica folosindu-şi email-ul si parola.\\
 
-Aceste date, împreuna cu orice alt formular din aplicatie, vor fi validate de 2 ori, 1 data pe frontend si 1 data pe backend. Validarea pe frontend o vom face din motive de UX, utilizatorul va şti dacă datele au un format valid si respecte anumite reguli de validare imediat după ce termina un anumit câmp de completat. Validarea pe backend o vom face din 2 motive, în primul rand pe frontend nu se pot face validările care ţin cont de date din baza de date, spre exemplu nu putem verifica dacă email-ul introdus este unic, iar în al doilea rand, reprezinta o metoda de protecţie împotriva celor cu intenţii rele, care nu folosesc aplicatia, ci interacţionează manual cu API-ul acesteia.
+Aceste date, împreuna cu orice alt formular din aplicatie, vor fi validate de 2 ori, 1 data pe partea de client si 1 data pe partea de server. Validarea pe partea de client o vom face din motive de UX, utilizatorul va şti dacă datele au un format valid si respecte anumite reguli de validare imediat după ce termina un anumit câmp de completat. Validarea pe partea de server o vom face din 2 motive, în primul rand pe partea de client nu se pot face validările care ţin cont de date din baza de date, spre exemplu nu putem verifica dacă email-ul introdus este unic, iar în al doilea rand, reprezinta o metoda de protecţie împotriva celor cu intenţii rele, care nu folosesc aplicatia, ci interacţionează manual cu API-ul acesteia.
 
 Dacă oricare dintre cele 2 validări găsesc erori, acestea vor fi afişate utilizatorului exact la câmpurile corespunzătoare.
 
@@ -445,7 +444,7 @@ Dacă oricare dintre cele 2 validări găsesc erori, acestea vor fi afişate uti
 \centering
 \includegraphics*[width=0.45\columnwidth]{exemplu-eroare-validare-frontend}
 \includegraphics*[width=0.45\columnwidth]{exemplu-eroare-validare-backend}
-\caption{Exemplu Eroare Validare - Frontend(stânga), Backend(dreapta)}
+\caption{Exemplu Eroare Validare - Client(stânga), Server(dreapta)}
 \label{exemplu-eroare-validare}
 \end{figure}
 
@@ -462,7 +461,7 @@ Odată autentificat, utilizatorul va fi întâmpinat cu un tablou de bord, de un
 
 Acest tablou este format din 2 componente, o bara de instrumente si lista cu universităţi.\\
 
-Bara de instrumente este formata din 2 elemente: 1 buton cu datele utilizatorului, care va redirecţiona spre acest tablou de bord, si o iconiţă de meniu, care va conţine un buton pentru delogare.
+Bara de instrumente este formata din 2 elemente: 1 buton cu datele utilizatorului, care va redirecţiona spre acest tablou de bord, si o iconiţă de meniu, care va conţine un buton pentru deconectare.
 
 \begin{figure}[H]
 \centering
@@ -471,7 +470,7 @@ Bara de instrumente este formata din 2 elemente: 1 buton cu datele utilizatorulu
 \label{tablou-de-bord-utilizator-bara-de-instrumente}
 \end{figure}
 
-Lista cu universităţi va afişa toate universităţile la care utilizatorul este înrolat, grupate după rolul pe care acesta îl deţine în cadrul universităţii. Iconiţă de adăugat din dreapta titlului va deschide formular de creare a unei noi universităţi având câmpurile nume si logo(optional). Fiecare universitate în parte este formata dintr-un buton, care va redirectiona spre tabloul de bord al universităţii, si dintr-un care va deschide un meniu special. În funcţie de rolul pe care îl deţinem în cadrul universităţii, acest meniu va contine funcţionalităţi diferite.
+Lista cu universităţi va afişa toate universităţile la care utilizatorul este înrolat, grupate după rolul pe care acesta îl deţine în cadrul universităţii. Iconiţa de adăugat din dreapta titlului va deschide formular de creare a unei noi universităţi, având câmpurile nume si sigla(optional). Fiecare universitate este formata dintr-un buton, care va redirectiona spre tabloul de bord al universităţii, si dintr-un buton care va deschide un meniu special. În funcţie de rolul pe care îl deţinem în cadrul universităţii, acest meniu va contine funcţionalităţi diferite.
 
 \begin{figure}[H]
 \centering
@@ -495,7 +494,7 @@ Lista cu universităţi va afişa toate universităţile la care utilizatorul es
 \label{tablou-de-bord-utilizator-meniu-universitate}
 \end{figure}
 
-Butonul editare(edit) va deschide un formular de editare al universităţii, cel de părăsire(leave) va scoate utilizatorul din lista universităţii, iar cel de ştergere(delete) va şterge universitatea si orice date asociate. În cazul butoanelor de părăsire si stergere, înainte sa se execute comanda, utilizatorul va fi întrebat dacă este sigur ca operaţia este cea dorita.
+Butonul editare va deschide un formular de editare al universităţii, cel de părăsire va scoate utilizatorul din lista universităţii, iar cel de ştergere va şterge universitatea si orice date asociate. În cazul butoanelor de părăsire si stergere, înainte sa se execute comanda, utilizatorul va fi întrebat dacă este sigur ca operaţia este cea dorita.
 
 \begin{figure}[H]
 \centering
@@ -514,15 +513,15 @@ Butonul editare(edit) va deschide un formular de editare al universităţii, cel
 
 \subsection{Structura Universităţii}
 
-Odată selectata o universitate, utilizatorul va fi redirecţionat spre tabloul de bord al universităţii. Aici vor fi introduse noi funcţionalităţi în bara de instrumente, în partea de stânga vor apărea un buton cu detaliile universităţii, care va redirectiona spre tabloul de bord al universităţii, si o iconiţă de meniu care poate fi comutata, pentru a tine meniul de navigare rapida deschis sau a-l închide. Tot aici, meniul utilizatorului va avea introduse butoane noi în functie de rolul pe care îl detine în cadrul universităţii:
+Odată selectata o universitate, utilizatorul va fi redirecţionat spre tabloul de bord al universităţii. Aici vor fi introduse noi funcţionalităţi în bara de instrumente, în partea de stânga vor apărea un buton cu detaliile universităţii, care va redirectiona spre tabloul de bord al universităţii, si o iconiţă de meniu care poate fi comutata, pentru a tine meniul de navigare rapida deschis sau pentru a-l închide. Tot aici, meniul utilizatorului va avea introduse butoane noi în functie de rolul pe care îl detine în cadrul universităţii:
 \begin{itemize}
 	\item Student
 		\begin{itemize}
-			\item Note(Grades) - vizualizarea rapida a tuturor notelor grupate
+			\item Note - vizualizarea rapida a tuturor notelor grupate
 		\end{itemize}
 	\item Profesor
 		\begin{itemize}
-			\item Set Personal de Întrebări(Question Bank)
+			\item Set Personal de Întrebări
 		\end{itemize}
 	\item Administrator
 		\begin{itemize}
@@ -530,7 +529,7 @@ Odată selectata o universitate, utilizatorul va fi redirecţionat spre tabloul 
 		\end{itemize}
 	\item Comun
 		\begin{itemize}
-			\item Activităţi Viitoare(Upcoming activities) - Vizualizarea rapida a următoarelor activităţi în ordine cronologica
+			\item Activităţi Viitoare - Vizualizarea rapida a următoarelor activităţi în ordine cronologica
 		\end{itemize}
 \end{itemize}
 
@@ -553,7 +552,7 @@ Odată selectata o universitate, utilizatorul va fi redirecţionat spre tabloul 
 \includegraphics*[width=0.32\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-administrator}
 \includegraphics*[width=0.32\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-profesor}
 \includegraphics*[width=0.32\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-student}
-\caption{Tablou de bord Universitate - Meniu Utilizator administrator(stânga), profesor(mijloc), student(dreapta)}
+\caption{Tablou de bord Universitate - Meniu Utilizator Administrator(stânga), Profesor(mijloc), Student(dreapta)}
 \label{tablou-de-bord-universitate-meniu-utilizator-administrator}
 \end{figure}
 
@@ -599,7 +598,7 @@ Ca si conţinut, va fi afişată lista de facultăţi din cadrul universităţii
 
 \subsection{Managementul utilizatorilor}
 
-Odată apăsat butonul 'Utilizatori' din meniul de utilizator dedicat administratorilor, vom fi redirecţionaţi către tabloul de bord al tuturor utilizatorilor din cadrul universităţii. Aici se vor putea adăuga noi utilizatori, sau modifica sau sterge utilizatorii deja existenţi. Fiecare utilizator va avea un rol si va fi înrolat la anumite facultăţi si materii. Un caz mai special îl reprezinta utilizatorii cu rol de administratori, care nu vor fi înrolaţi la anumite facultăţi, aplicatia ii va înrola automat la toate facultăţile si materiile si ii va tine în aceasta stare de fiecare data când acestea sa vor schimba. Totodată, administratorii nu vor avea posibilitatea ştergerii sau schimbării rolului altor administratori.
+Odată apăsat butonul 'Utilizatori' din meniul dedicat administratorilor, utilizatorul va fi redirecţionat către tabloul de bord al tuturor utilizatorilor din cadrul universităţii. Aici se vor putea adăuga noi utilizatori, sau modifica sau sterge utilizatorii deja existenţi. Fiecare utilizator va avea un rol si va fi înrolat la anumite facultăţi si materii. Un caz mai special îl reprezinta utilizatorii cu rol de administratori, care nu vor fi înrolaţi la anumite facultăţi, aplicatia ii va înrola automat la toate facultăţile si materiile si ii va tine în aceasta stare de fiecare data când acestea sa vor schimba. Totodată, administratorii nu vor avea posibilitatea ştergerii sau schimbării rolului altor administratori.
 
 \begin{figure}[H]
 \centering
@@ -666,11 +665,11 @@ Odată selectata o materie, utilizatorul va fi redirectionat spre tabloul de bor
 
 Pentru crearea si editarea activităţilor, formularul se va schimba în functie de tipul de activitate dorit.
 
-Pentru tipurile materiale(resource) si forum, acestea nu vor contine nimic în plus fata de formularul de baza al unei activităţi. Orice activitate are următoarele câmpuri de completat:
+Pentru tipurile materiale si forum, acestea nu vor contine nimic în plus fata de formularul de baza al unei activităţi. Orice activitate are următoarele câmpuri de completat:
 \begin{itemize}
-	\item Nume(Name) - numele activităţii
-	\item Descriere(Description)(optional) - descriere sau textul activităţii
-	\item Fişiere(Files)(optional) - fişiere ajutătoare pentru parcurgerea activităţii de către student
+	\item Nume - numele activităţii
+	\item Descriere(optional) - descriere sau textul activităţii
+	\item Fişiere(optional) - fişiere ajutătoare pentru parcurgerea activităţii de către student
 \end{itemize}
 
 \begin{figure}[H]
@@ -688,10 +687,10 @@ Pentru tipurile materiale(resource) si forum, acestea nu vor contine nimic în p
 \label{tablou-de-bord-materie-formular-material}
 \end{figure}
 
-Pentru tipul tema(assignment), se vor mai adăuga 2 câmpuri:
+Pentru tipul tema, se vor mai adăuga 2 câmpuri:
 \begin{itemize}
-	\item Nota maxima(Max Grade) - nota maxima pe care o poate obţine un student pentru realizarea temei
-	\item Termen limita(Deadline) - data si ora pana când tema poate fi încărcată
+	\item Nota maxima - nota maxima pe care o poate obţine un student pentru realizarea temei
+	\item Termen limita - data si ora pana când tema poate fi încărcată
 \end{itemize}
 Nota maxima trebuie sa fie mai mare sau egal cu 0, iar termenul limita trebuie sa reprezinte o data mai mare decât data curenta.
 
@@ -707,18 +706,18 @@ Nota maxima trebuie sa fie mai mare sau egal cu 0, iar termenul limita trebuie s
 \includegraphics*[width=0.32\columnwidth]{tablou-de-bord-materie-camp-alegere-data}
 \includegraphics*[width=0.32\columnwidth]{tablou-de-bord-materie-camp-alegere-ora}
 \includegraphics*[width=0.32\columnwidth]{tablou-de-bord-materie-camp-alegere-minut}
-\caption{Tablou de bord Materie - Câmp alegere Timp - data(1), ora(2), minut(3)}
+\caption{Tablou de bord Materie - Câmp alegere Timp - data(stanga), ora(mijloc), minut(dreapta)}
 \label{tablou-de-bord-materie-camp-alegere-timp}
 \end{figure}
 
-Pentru tipul test(quiz), se vor mai adăuga 6 câmpuri:
+Pentru tipul test, se vor mai adăuga 6 câmpuri:
 \begin{itemize}
-	\item Timp deschidere(Time Open) - timp de deschidere al testului
-	\item Timp închidere(Time Close) - timp de închidere al testului
-	\item Timp limita(minute)(Time Limit) - timpul limita maxim admis
-	\item Amestecare întrebări(Shuffle Questions) - amesteca aleator ordinea întrebărilor
-	\item Amestecare răspunsuri(Shuffle Answers) - amesteca aleator ordinea răspunsurilor fiecărei întrebări
-	\item Întrebări(Questions) - setul de întrebări pentru generarea testelor studentilor, iar pentru fiecare întrebare, vom avea 2 câmpuri
+	\item Timp deschidere - timp de deschidere al testului
+	\item Timp închidere - timp de închidere al testului
+	\item Timp limita(minute) - timpul limita maxim admis
+	\item Amestecare întrebări - amesteca aleator ordinea întrebărilor
+	\item Amestecare răspunsuri - amesteca aleator ordinea răspunsurilor fiecărei întrebări
+	\item Întrebări - setul de întrebări pentru generarea testelor studentilor, iar pentru fiecare întrebare, vom avea 2 câmpuri
 		\begin{itemize}
 			\item Ordinea - ordinea în lista de întrebări
 			\item Nota maxima - nota maxima pe care o poate obtine un student pentru răspunsul corect la întrebare
@@ -765,7 +764,7 @@ Odată apăsat unul dintre studenţi, utilizatorul va fi redirectionat către un
 \begin{figure}[H]
 \centering
 \includegraphics*[width=\columnwidth]{tablou-de-bord-notare-tema-student}
-\caption{Tablou de bord - Notare tema student}
+\caption{Tablou de bord - Notare tema Student}
 \label{tablou-de-bord-notare-tema-student}
 \end{figure}
 
@@ -788,7 +787,7 @@ Odată apăsat unul dintre studenţi, utilizatorul va fi redirectionat către un
 \begin{figure}[H]
 \centering
 \includegraphics*[width=\columnwidth]{tablou-de-bord-activitate-lista-studenti-test}
-\caption{Tablou de bord Activitate - Lista studenti Test}
+\caption{Tablou de bord Activitate - Lista Studenti Test}
 \label{tablou-de-bord-activitate-lista-studenti-test}
 \end{figure}
 
@@ -797,7 +796,7 @@ Odată apăsat unul dintre studenti, utilizatorul va fi redirectionat către un 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=\columnwidth]{tablou-de-bord-notare-test-student}
-\caption{Tablou de bord - Notare test student}
+\caption{Tablou de bord - Notare test Student}
 \label{tablou-de-bord-notare-test-student}
 \end{figure}
 
@@ -838,10 +837,10 @@ La selectarea Setului personal de întrebări din meniul, utilizatorul va fi red
 
 Formularul de creare a unei întrebări cuprinde următoarele câmpuri:
 \begin{itemize}
-	\item Tip de activitate(Type) - care poate fi cu răspuns unic(Single Choice), sau cu răspuns multiplu(Multiple Choice)
-	\item Nume(Name) - numele întrebării
+	\item Tip de activitate - care poate fi cu răspuns unic, sau cu răspuns multiplu
+	\item Nume - numele întrebării
 	\item Text - textul întrebării
-	\item Răspunsuri(Answers) - răspunsurile întrebării, iar pentru fiecare răspuns trebuie completate 2 câmpuri
+	\item Răspunsuri - răspunsurile întrebării, iar pentru fiecare răspuns trebuie completate 2 câmpuri
 		\begin{itemize}
 			\item Ordine - ordinea din lista de răspunsuri
 			\item Text - textul răspunsului
@@ -886,7 +885,7 @@ Ajungând în tabloul de bord al materiei, utilizatorii cu rol de student vor ve
 
 Odată selectata o activitate, utilizatorul va fi redirectionat către tabloul de bord al activităţii, care va afisa ca si în cazul utilizatorilor cu rol de profesor, detalii de baza despre activitate, dar si detalii specifice studentului. Diferenţele notabile sunt pentru tipurile tema si test.
 
-În cazul temelor, studentului i se vor afisa detalii personale legate de tema respectiva, nota, ultima data de încărcare, si dacă timpul limita nu s-a scurs, o modalitate de încărcare a temei.
+În cazul temelor, studentului i se vor afisa detalii personale legate de tema respectiva, nota, ultima data de încărcare, dacă timpul limita nu s-a scurs si o modalitate de încărcare a temei.
 
 \begin{figure}[H]
 \centering
