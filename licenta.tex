@@ -27,8 +27,8 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinelanguage{JavaScript}{
-  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
-  ndkeywords={class, export, boolean, throw, implements, import, this},
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, let, const, if, in, while, do, else, case, break},
+  ndkeywords={class, export, boolean, throw, implements, import, this, interface},
   sensitive=false,
   comment=[l]{//},
   morecomment=[s]{/*}{*/},
@@ -412,7 +412,7 @@ Tehnologiile pe care le-am folosit pe partea de server sunt:
 \begin{figure}[H]
 \centering
 \includegraphics*[width=0.5\columnwidth]{auth-login}
-\caption{Formular Autentificare}
+\caption{Formular Autentificare, Anexă: \ref{anexaformularinautentificare}, \ref{anexavalidareautentificareserver}}
 \label{formular-autentificare}
 \end{figure}
 
@@ -420,7 +420,7 @@ Tehnologiile pe care le-am folosit pe partea de server sunt:
 \centering
 \includegraphics*[width=0.45\columnwidth]{auth-register1}
 \includegraphics*[width=0.45\columnwidth]{auth-register2}
-\caption{Formular Înregistrare}
+\caption{Formular Înregistrare, Anexă: \ref{anexaformularinregistrare}, \ref{anexavalidareinregistrareserver}}
 \label{formular-inregistrare}
 \end{figure}
 
@@ -438,7 +438,7 @@ Odată înregistrat, acesta se va putea autentifica folosindu-şi email-ul şi p
 
 Aceste date, împreuna cu orice alt formular din aplicaţie, vor fi validate de 2 ori, 1 dată pe partea de client şi 1 dată pe partea de server. Validarea pe partea de client o vom face din motive de UX, utilizatorul va şti dacă datele au un format valid şi respecta anumite reguli de validare imediat după ce termină un anumit câmp de completat. Validarea pe partea de server o vom face din 2 motive, în primul rând pe partea de client nu se pot face validările care ţin cont de date din baza de date, spre exemplu nu putem verifica dacă email-ul introdus este unic, iar în al doilea rând, reprezintă o metodă de protecţie împotriva celor cu intenţii rele, care nu folosesc aplicaţia, ci interacţionează manual cu API-ul acesteia.\cite{formularbunepractici}
 
-Dacă oricare dintre cele 2 validări găsesc erori, acestea vor fi afişate utilizatorului exact la câmpurile corespunzătoare.
+Dacă oricare dintre cele 2 validări găsesc erori, acestea vor fi afişate utilizatorului exact la câmpurile corespunzătoare.\ref{anexamodulautentificarefunctionalitatiserver}
 
 \begin{figure}[H]
 \centering
@@ -475,7 +475,7 @@ Lista cu universităţi va afişa toate universităţile la care utilizatorul es
 \begin{figure}[H]
 \centering
 \includegraphics*[width=\columnwidth]{tablou-de-bord-utilizator-lista-universitati}
-\caption{Tablou de bord Utilizator - Listă Universităţi}
+\caption{Tablou de bord Utilizator - Listă Universităţi, Anexă: \ref{anexaafisarelistauniversitati}}
 \label{tablou-de-bord-utilizator-lista-universitati}
 \end{figure}
 
@@ -536,7 +536,7 @@ Odată selectată o universitate, utilizatorul va fi redirecţionat spre tabloul
 \begin{figure}[H]
 \centering
 \includegraphics*[width=\columnwidth]{tablou-de-bord-universitate-bara-de-instrumente}
-\caption{Tablou de bord Universitate - Bară de Instrumente}
+\caption{Tablou de bord Universitate - Bară de Instrumente\ref{anexabaradeinstrumente}}
 \label{tablou-de-bord-universitate-bara-de-instrumente}
 \end{figure}
 
@@ -552,7 +552,7 @@ Odată selectată o universitate, utilizatorul va fi redirecţionat spre tabloul
 \includegraphics*[width=0.32\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-administrator}
 \includegraphics*[width=0.32\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-profesor}
 \includegraphics*[width=0.32\columnwidth]{tablou-de-bord-universitate-meniu-utilizator-student}
-\caption{Tablou de bord Universitate - Meniu Utilizator Administrator(stânga), Profesor(mijloc), Student(dreapta)}
+\caption{Tablou de bord Universitate - Meniu Utilizator Administrator(stânga), Profesor(mijloc), Student(dreapta)\ref{anexameniuutilizator}}
 \label{tablou-de-bord-universitate-meniu-utilizator-administrator}
 \end{figure}
 
@@ -561,7 +561,7 @@ Ca şi conţinut, va fi afişată lista de facultăţi din cadrul universităţi
 \begin{figure}[H]
 \centering
 \includegraphics*[width=\columnwidth]{tablou-de-bord-universitate-lista-facultati-administrator}
-\caption{Tablou de bord Universitate - Listă facultăţi Administrator}
+\caption{Tablou de bord Universitate - Listă facultăţi Administrator\ref{anexaafisarelistafacultati}}
 \label{tablou-de-bord-universitate-lista-facultati-administrator}
 \end{figure}
 
@@ -603,7 +603,7 @@ Odată apăsat butonul 'Utilizatori' din meniul dedicat administratorilor, utili
 \begin{figure}[H]
 \centering
 \includegraphics*[width=\columnwidth]{tablou-de-bord-management-utilizatori}
-\caption{Tablou de bord Management Utilizatori}
+\caption{Tablou de bord Management Utilizatori\ref{anexalistautilizatori}}
 \label{tablou-de-bord-management-utilizatori}
 \end{figure}
 
@@ -966,7 +966,52 @@ Proiectul implementează funcţionalităţile cele mai importante pentru desfă�
 \bibliographystyle{unsrt}
 \bibliography{referinte}
 
-% \appendix
+\appendix
+
+\chapter{Cod Sursa}
+
+\section{Modul Autentificare - Funcționalități Server}
+\label{anexamodulautentificarefunctionalitatiserver}
+\lstinputlisting[language=JavaScript]{cod/modul-autentificare-functionalitati-server-resolver.ts}
+\lstinputlisting[language=JavaScript]{cod/modul-autentificare-functionalitati-server-service.ts}
+
+\section{Formular Autentificare}
+\label{anexaformularinautentificare}
+\lstinputlisting[language=JavaScript]{cod/formular-autentificare.tsx}
+
+\section{Formular Înregistrare}
+\label{anexaformularinregistrare}
+\lstinputlisting[language=JavaScript]{cod/formular-inregistrare.tsx}
+
+\section{Validare autentificare server}
+\label{anexavalidareautentificareserver}
+\lstinputlisting[language=JavaScript]{cod/validare-autentificare-server.ts}
+
+\section{Validare înregistrare server}
+\label{anexavalidareinregistrareserver}
+\lstinputlisting[language=JavaScript]{cod/validare-inregistrare-server.ts}
+
+\section{Afişare lista universități}
+\label{anexaafisarelistauniversitati}
+\lstinputlisting[language=JavaScript]{cod/afisare-lista-universitati.tsx}
+\lstinputlisting[language=JavaScript]{cod/lista-universitati.tsx}
+
+\section{Bară de instrumente}
+\label{anexabaradeinstrumente}
+\lstinputlisting[language=JavaScript]{cod/bara-de-instrumente.tsx}
+
+\section{Meniu Utilizator}
+\label{anexameniuutilizator}
+\lstinputlisting[language=JavaScript]{cod/meniu-utilizator.tsx}
+
+\section{Afişare listă facultăți}
+\label{anexaafisarelistafacultati}
+\lstinputlisting[language=JavaScript]{cod/afisare-lista-facultati.tsx}
+\lstinputlisting[language=JavaScript]{cod/facultate-colapsabila.tsx}
+
+\section{Management listă utilizatori}
+\label{anexalistautilizatori}
+\lstinputlisting[language=JavaScript]{cod/lista-utilizatori.tsx}
 
 \end{document}
 

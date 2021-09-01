@@ -600,7 +600,7 @@ Catedra \@catedra} \par\nobreak % DN
  \setcounter{chapter}{0}
  \setcounter{section}{0}
  \renewcommand\@chapapp{Anexa}
- \renewcommand\thechapter{\Alph{chapter}}
+ \renewcommand\thechapter{\arabic{chapter}}
 % Redefine @chapter  so that appnumberline (ratherline) is used.
  \def\@chapter[##1]##2{\ifnum \c@secnumdepth >\m@ne
   \refstepcounter{chapter}
