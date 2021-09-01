@@ -99,6 +99,7 @@
 }
 \afterpreface 
 
+\null
 \chapter*{Introducere}
 \addcontentsline{toc}{chapter}{Introducere}
 
@@ -137,6 +138,7 @@ Aplicația permite crearea și managementul unei universități. În cadrul univ
 		\end{itemize}
 \end{itemize}
 
+\null
 \chapter{Proiectare}
 
 Înainte de a trece la implementarea propriu-zisă a proiectului, trebuie să înțelegem foarte bine cerințele și metodele prin care acesta va fi construit. Această treapta preliminară implementării se numește proiectare, și a devenit din ce în ce mai importantă cu cât programele software au devenit mai complexe.
@@ -242,7 +244,7 @@ Pentru notare, profesorul este nevoit în primul rând să selecteze activitatea
 
 \begin{figure}[H]
 \centering
-\includegraphics*[width=0.45\columnwidth]{diagrama-activitate-noteaza-student}
+\includegraphics*[width=0.4\columnwidth]{diagrama-activitate-noteaza-student}
 \caption{Diagramă Activitate - Notează Student}
 \label{diagrama-activitate-noteaza-student}
 \end{figure}
@@ -321,7 +323,7 @@ Pentru activitățile de tip test, studenții vor putea interacționa în diferi
 
 \begin{figure}[H]
 \centering
-\includegraphics*[width=0.75\columnwidth]{diagrama-use-case-participa-la-test}
+\includegraphics*[width=0.7\columnwidth]{diagrama-use-case-participa-la-test}
 \caption{Diagramă Caz de utilizare - Participă la Test}
 \label{diagrama-use-case-participa-la-test}
 \end{figure}
@@ -347,7 +349,7 @@ Indiferent de rolul pe care un utilizator îl are în universitate, acesta va pu
 
 \begin{figure}[H]
 \centering
-\includegraphics*[width=0.45\columnwidth]{diagrama-use-case-participa-la-forum}
+\includegraphics*[width=0.4\columnwidth]{diagrama-use-case-participa-la-forum}
 \caption{Diagramă Caz de utilizare - Participă la Forum}
 \label{diagrama-use-case-participa-la-forum}
 \end{figure}
@@ -963,9 +965,13 @@ Proiectul implementează funcţionalităţile cele mai importante pentru desfă�
 
 \addcontentsline{toc}{chapter}{Concluzii}
 
+\newpage
+\hbox
 \bibliographystyle{unsrt}
 \bibliography{referinte}
 
+\newpage
+\hbox
 \appendix
 
 \chapter{Cod Sursa}
